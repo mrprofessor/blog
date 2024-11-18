@@ -1,0 +1,121 @@
+#+TITLE: Org Mode Features
+#+AUTHOR: rkar
+#+WEIGHT: 10
+#+DATE: 2023-12-25
+
+* Introduction
+:PROPERTIES:
+:CUSTOM_ID: introduction
+:END:
+Org mode is a powerful tool within Emacs, designed to make text
+editing, task management, and document structuring seamless. Whether
+you’re writing a blog, organizing your tasks, or managing a project,
+Org mode has features to help.
+
+This article explores key Org mode features.
+
+* Headings and Subheadings
+:PROPERTIES:
+:CUSTOM_ID: headings-and-subheadings
+:END:
+Organize your content with hierarchical headings:
+
+** Main Heading
+:PROPERTIES:
+:CUSTOM_ID: main-heading
+:END:
+*** Subheading
+:PROPERTIES:
+:CUSTOM_ID: subheading
+:END:
+**** Nested Subheading
+
+* Task Management
+:PROPERTIES:
+:CUSTOM_ID: task-management
+:END:
+Use TODO keywords for task tracking:
+
+- TODO Learn Org mode basics
+- IN-PROGRESS Write an article
+- DONE Publish the article
+
+Change states with shortcuts like =C-c C-t=.
+
+* Links
+:PROPERTIES:
+:CUSTOM_ID: links
+:END:
+Insert links to websites, files, or Org headings:
+
+- [[https://orgmode.org][Org mode Homepage]]
+- [[file:~/Documents/notes.org][My Notes]]
+- Internal link: [[*Introduction]]
+
+* Tables
+:PROPERTIES:
+:CUSTOM_ID: tables
+:END:
+Create and manipulate tables easily:
+
+| Task          | Status      |   Deadline |
+|---------------+-------------+------------|
+| Learn Org     | IN-PROGRESS | 2024-11-20 |
+| Write Article | DONE        | 2024-11-18 |
+| Publish Blog  | TODO        | 2024-11-25 |
+
+Re-align the table with =TAB= or =C-c C-c=.
+
+* Code Blocks
+:PROPERTIES:
+:CUSTOM_ID: code-blocks
+:END:
+Embed and execute code directly in Org mode:
+
+#+BEGIN_SRC python
+  print("Hello, Org mode!")
+#+END_SRC
+
+Execute with =C-c C-c= on the block.
+
+* Tags and Properties
+:PROPERTIES:
+:CUSTOM_ID: tags-and-properties
+:END:
+Assign metadata with tags and properties:
+
+:PROPERTIES:
+:Category: Org-Mode :Level: Intermediate
+:END:
+
+* Agenda and Scheduling
+:PROPERTIES:
+:CUSTOM_ID: agenda-and-scheduling
+:END:
+Schedule tasks with =SCHEDULED= and deadlines with =DEADLINE=:
+
+- TODO Write Article SCHEDULED: <2024-11-17> DEADLINE: <2024-11-18>
+
+Use =C-c a= to view the agenda.
+
+* Footnotes
+:PROPERTIES:
+:CUSTOM_ID: footnotes
+:END:
+
+Insert footnotes for additional information[fn:1].
+
+[fn:1] This is a footnote.
+
+
+* Exporting
+:PROPERTIES:
+:CUSTOM_ID: exporting
+:END:
+Export documents to various formats like HTML, PDF, or Markdown:
+
+- Export to HTML: =C-c C-e h h=
+- Export to PDF: =C-c C-e l l=
+
+Org mode is a versatile tool that grows with your needs. Start
+exploring its features today!

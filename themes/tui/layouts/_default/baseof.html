@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode | default "en-us" }}">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Favicon -->
+    {{ with .Site.Params.favicon }}<link rel="icon" type="image/png" href="{{ . }}" />{{ end }}
+
+    {{ if eq .IsPage true }}
+    <title itemprop="name">{{ .Title }}</title>
+    {{ else }}
+    <title itemprop="name">{{ .Title }} | {{ .Site.Params.description }}</title>
+	{{ end }}
+
+    
+    {{ with .Site.Params.description }}<meta name="description" content="{{ . }}">{{ end }}
+    {{ with .Site.Params.author }}<meta name="author" content="{{ . }}">{{ end }}
+
+    {{ $styles := resources.Get "css/style.css" | minify | fingerprint}}
+    <link rel="stylesheet" href="{{ $styles.Permalink }}" integrity="{{ $styles.Data.Integrity }}" crossorigin="anonymous">
+
+    {{ with .OutputFormats.Get "RSS" -}}
+    {{ printf `<link rel="%s" type="%s" href="%s" title="%s">` .Rel .MediaType.Type .RelPermalink $.Site.Title | safeHTML }}
+    {{- end }}
+
+    <!-- Meta tags -->
+    {{ partial "meta" . }}
+
+  </head>
+  <body>
+    <div class="layout">
+      <!-- Only list and post pages should have Nav -->
+      {{ partial "header" . }}
+      {{ block "main" . }}{{ end }}
+      {{ partial "footer" . }}
+    </div>
+  </body>
+
+  <script>
+    // TODO
+    // Use Hugo templating to achieve this
+    // Script to check active nav menu
+    (function() {
+        const links = document.querySelectorAll("nav a")
+        const currentUrl = location.href
+
+        for (const link of links) {
+            if (location.href.split("/").length === 4 && link.href.endsWith("/articles/")) {
+                link.classList.add("active-link")
+                break;
+            }
+
+            if (link.href === currentUrl) {
+                link.classList.add("active-link")
+                console.log(link.href)
+            }
+        }
+    }())
+  </script>
+</html>
+

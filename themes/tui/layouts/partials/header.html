@@ -1,0 +1,23 @@
+<header>
+	<!-- title wrapper -->
+	<div class="title-wrapper">
+
+		{{ with .Site.Menus.main }}
+            <nav class="site-nav">
+                <ul>
+                    {{ range . }}
+                        <li><a href="{{ .URL | relURL }}">{{ .Name }}</a></li>
+                    {{ end }}
+                </ul>
+            </nav>
+		{{ end }}
+
+		<a href="/">
+            {{ if (eq .IsPage false) }}
+                <h2 class="single-page-title">{{ .Site.Title }}</h2>
+            {{ end }}
+		</a>
+
+	</div>
+	<!-- title wrapper end -->
+</header>

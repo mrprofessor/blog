@@ -1,0 +1,51 @@
+#+hugo_base_dir: ../
+#+hugo_section: uses
+#+author: rkar
+
+* Uses
+   :PROPERTIES:
+   :EXPORT_FILE_NAME: _index
+   :EXPORT_HUGO_LAYOUT: single
+   :CUSTOM_ID: uses
+   :END:
+
+In my everyday tasks, I rely on a variety of tools to get things
+done. While some may not be universally regarded as the best, they’ve
+proven for effective for me. Ultimately, what matters is finding tools
+that suit your needs and preferences.
+
+** Software
+:PROPERTIES:
+:CUSTOM_ID: software
+:END:
+
++ *Text Editor* - [[https://emacs.rkar.org][Emacs]], Zed
++ *Terminal Emulator* - WezTerm
++ *Web Browser* - Safari, Brave
++ *Misc* - Org-Roam, Zsh, [[https://httpie.io][Httpie]]
++ *Window Manager* - [[https://github.com/nikitabobko/AeroSpace][Aerospace]]
+
+** Hardware
+:PROPERTIES:
+:CUSTOM_ID: hardware
+:END:
+
++ *Personal Computer* - 14" M3 Pro MacBook Pro (2023)
++ *Work Computer* - 16" M2 Max MacBook Pro (2022)
++ *Fun Computer* - Ryzen 5600x/Nvidia 3070 FE
++ *Handheld Computer* - Steam Deck OLED (2023)
++ *Keyboards* - A bunch of [[https://mrprofessor.dev][boards]]
++ *Headphones* - SteelSeries Arctis 7 (Xbox Edition), Realme buds 2 wired earphones
++ *Mouse* - Logitech G Pro Lightspeed
++ *Phone* - iPhone 14
++ *Camera* - Nikon D3500 + Kit Lens
+
+
+** Ancient History
+:PROPERTIES:
+:CUSTOM_ID: ancient-history
+:END:
+
++ *iTerm 2* - Not as feature rich as WezTerm/Kitty.
++ *Logseq* - Started to show its performance issues with large notes.
++ *Notion* - Great for databases, but not for everyday notes. Also, slow.
