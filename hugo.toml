@@ -3,7 +3,7 @@ languageCode = "en-us"
 DefaultContentLanguage = "en"
 
 pygmentsCodefences = true
-pygmentsStyle = "manni"
+pygmentsStyle = "emacs"
 paginate = 30
 
 title = "rkar.org"
@@ -15,6 +15,7 @@ enableRobotsTXT = true
 canonifyURLs = true
 
 publishDir = "docs"
+summaryLength = 99999999
 
 
 [menu]
@@ -28,34 +29,41 @@ publishDir = "docs"
   [[menu.main]]
     identifier = "articles"
     name = "articles"
-    url = "/articles/"
+    url = "/articles"
     weight = 11
 
   [[menu.main]]
     identifier = "about"
     name = "about"
-    url = "/about/"
+    url = "/about"
     weight = 12
+
+
+  [[menu.main]]
+    identifier = "uses"
+    name = "uses"
+    url = "/uses"
+    weight = 13
+
+  [[menu.main]]
+    identifier = "til"
+    name = "til"
+    url = "/til"
+    weight = 14
 
   [[menu.main]]
     identifier = "keyboards"
     name = "keyboards"
     url = "https://mrprofessor.dev"
-    weight = 13
+    weight = 15
+    [menu.main.params]
+        external = true
 
   [[menu.main]]
-    identifier = "uses"
-    name = "uses"
-    url = "/uses/"
-    weight = 14
-
-  # [[menu.secondary]]
-  #   identifier = "resume"
-  #   name = "résumé"
-  #   url = "/resume/"
-  #   weight = 10
-
-
+    identifier = "feed"
+    name = "feed"
+    url = "/articles/index.xml"
+    weight = 16
 
 [params]
   author = "rkar"
@@ -77,3 +85,9 @@ publishDir = "docs"
     ordered = true
   [markup.goldmark.renderer]
     unsafe = true
+
+[outputs]
+  home = ['html', 'rss']
+  section = ['html', 'rss']
+  taxonomy = ['html']
+  term = ['html']

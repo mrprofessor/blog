@@ -1,23 +1,19 @@
 <header>
-	<!-- title wrapper -->
-	<div class="title-wrapper">
-
-		{{ with .Site.Menus.main }}
-            <nav class="site-nav">
-                <ul>
-                    {{ range . }}
-                        <li><a href="{{ .URL | relURL }}">{{ .Name }}</a></li>
-                    {{ end }}
-                </ul>
-            </nav>
-		{{ end }}
-
-		<a href="/">
-            {{ if (eq .IsPage false) }}
-                <h2 class="single-page-title">{{ .Site.Title }}</h2>
-            {{ end }}
-		</a>
-
-	</div>
-	<!-- title wrapper end -->
+  <div class="title-wrapper">
+        <nav class="site-nav">
+            <ul>
+                {{ range .Site.Menus.main }}
+                    <li {{ if and (ne (.URL | relURL) "/") (hasPrefix $.Page.Path (.URL | relURL)) }} class="current-nav" {{ end }}
+                        {{ if and (eq (.URL | relURL) "/") (eq $.Page.Path "/") }} class="current-nav" {{ end }}>
+                      <a href="{{ .URL | relURL }}" {{ if .Params.external }}target="_blank" rel="noopener noreferrer"{{ end }}>
+                        {{ .Name }}
+                      </a>
+                    </li>
+                {{ end }}
+            </ul>
+        </nav>
+        <a href="/" class="title-link">
+            {{ if not .IsPage }}<h2>{{ .Site.Title }}</h2>{{ end }}
+        </a>
+  </div>
 </header>

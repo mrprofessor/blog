@@ -6,12 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
     <!-- Favicon -->
-    {{ with .Site.Params.favicon }}<link rel="icon" type="image/png" href="{{ . }}" />{{ end }}
+    <!-- {{ with .Site.Params.favicon }}<link rel="icon" type="image/png" href="{{ . }}" />{{ end }} -->
 
     {{ if eq .IsPage true }}
     <title itemprop="name">{{ .Title }}</title>
     {{ else }}
-    <title itemprop="name">{{ .Title }} | {{ .Site.Params.description }}</title>
+    <title itemprop="name">{{ .Title }} </title>
 	{{ end }}
 
     
@@ -37,27 +37,5 @@
       {{ partial "footer" . }}
     </div>
   </body>
-
-  <script>
-    // TODO
-    // Use Hugo templating to achieve this
-    // Script to check active nav menu
-    (function() {
-        const links = document.querySelectorAll("nav a")
-        const currentUrl = location.href
-
-        for (const link of links) {
-            if (location.href.split("/").length === 4 && link.href.endsWith("/articles/")) {
-                link.classList.add("active-link")
-                break;
-            }
-
-            if (link.href === currentUrl) {
-                link.classList.add("active-link")
-                console.log(link.href)
-            }
-        }
-    }())
-  </script>
 </html>
 

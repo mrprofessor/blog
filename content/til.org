@@ -1,0 +1,107 @@
+#+hugo_base_dir: ../
+#+hugo_section: til
+#+hugo_type: til
+#+author: rkar
+
+* TIL
+:PROPERTIES:
+:CUSTOM_ID: til
+:END:
+
+Tidbits, tips, things I read recently etc.
+
+
+** 2024/12/06 - Debugging Hugo pages
+:PROPERTIES:
+:CUSTOM_ID: 2024-12-05-debugging-hugo-pages
+:END:
+
+One of the easiest ways to debug metadata in Hugo is by simply
+printing all of them on the page.
+
+#+begin_src html
+  <textarea>{{ . | jsonify }}</textarea>
+#+end_src
+
+To view the raw content of a page:
+
+#+begin_src html
+  <textarea>{{ .Content | safeHTML }}</textarea>
+#+end_src
+
+I prefer =<textarea>= because it provides an easy way to view and
+expand the output using the browser's resize handle.
+
+
+** 2024/12/03 - Trace in Haskell
+:PROPERTIES:
+:CUSTOM_ID: 2024-12-03-trace-in-haskell
+:END:
+
+=trace= is a debugging function in Haskell, similar to a =log= or
+=print= statement in other languages. It allows you to log messages
+while evaluating expressions.
+
+Here’s an example:
+
+#+begin_src haskell
+  import System.IO
+  import Debug.Trace (trace)
+
+  main :: IO ()
+  main = do
+      let x = 1 + 2
+      let y = x + 3
+      trace ("trace x == " ++ show x) $
+          trace ("trace y == " ++ show y) $ do
+              let z = x + y
+              putStrLn ("z == " ++ show z)
+
+      putStrLn "Done!"
+#+end_src
+
+We can also use =trace= when defining variables. Whenever the
+variable's value is evaluated, =trace= logs the message. For example:
+
+#+begin_src haskell
+  ghci> import Debug.Trace (trace)
+  ghci> let nu = trace ("OG value of nu == " ++ show 7) 7
+  ghci> nu
+  OG value of nu == 7
+  7
+  ghci> x = nu + 7
+  ghci> x
+  OG value of nu == 7
+  14
+  ghci> y = x + 7
+  ghci> y
+  OG value of nu == 7
+  21
+#+end_src
+
+** 2024/12/01 - MongoDB Database Creation
+:PROPERTIES:
+:CUSTOM_ID: 2024-12-01-mongodb-database-creation
+:END:
+
+Apparently, you can't create a MongoDB database without creating a
+collection.
+
+Ideally, the following command should create a database:
+
+#+begin_src python
+  database.command(
+    'createUser',
+    database_user,
+    pwd=database_password,
+    roles=roles
+  )
+#+end_src
+
+However, it doesn't. A MongoDB database is created only when data is
+inserted. To work around this, we insert an empty document into the
+=random= collection:
+
+#+begin_src python
+  database["random"].insert_one({})
+#+end_src

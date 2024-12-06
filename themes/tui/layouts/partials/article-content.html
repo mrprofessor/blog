@@ -1,0 +1,18 @@
+<div class="blog-post-content">
+    {{ if .Params.Cover }}
+        <div class="post-image">
+            <img src={{ .Params.Cover }} loading="lazy">
+        </div>
+    {{ else if .Params.Image }}
+        <div class="post-image">
+            <img src={{ .Params.Image }} loading="lazy">
+        </div>
+    {{ end }}
+    
+    <!-- Add table of contents to single pages(must be a post) -->
+    {{ if (and (eq .IsPage true) (eq .Section "articles")) }}
+        <h2>Table of Contents</h2>
+        {{ .TableOfContents }}
+    {{ end }}
+    {{ .Content | safeHTML }}
+</div>
