@@ -33,37 +33,43 @@ summaryLength = 99999999
     weight = 11
 
   [[menu.main]]
-    identifier = "about"
-    name = "about"
-    url = "/about"
-    weight = 12
-
-
-  [[menu.main]]
-    identifier = "uses"
-    name = "uses"
-    url = "/uses"
-    weight = 13
-
-  [[menu.main]]
     identifier = "til"
     name = "til"
     url = "/til"
-    weight = 14
+    weight = 12
 
   [[menu.main]]
-    identifier = "keyboards"
-    name = "keyboards"
-    url = "https://mrprofessor.dev"
-    weight = 15
-    [menu.main.params]
-        external = true
+    identifier = "about"
+    name = "about"
+    url = "/about"
+    weight = 13
 
   [[menu.main]]
     identifier = "feed"
     name = "feed"
     url = "/articles/index.xml"
-    weight = 16
+    weight = 14
+
+  [[menu.secondary]]
+    identifier = "uses"
+    name = "uses"
+    url = "/uses"
+    weight = 10
+
+  [[menu.secondary]]
+    identifier = "emacs"
+    name = "emacs"
+    url = "https://emacs.rudra.dev"
+    weight = 11
+    params.external = true
+
+  [[menu.secondary]]
+    identifier = "keyboards"
+    name = "keyboards"
+    url = "https://mrprofessor.dev"
+    weight = 13
+    params.external = true
+
 
 [params]
   author = "rkar"
@@ -73,6 +79,7 @@ summaryLength = 99999999
   twitter = "@weary_beard"
   favicon = "/images/favicon.ico"
   mainSections = "articles"
+  recentArticlesLimit = 3
 
 [languages]
   [languages.en]

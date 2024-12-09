@@ -1,20 +1,25 @@
 <footer>
-	<div class="bottom-nav">
-		{{ with .Site.Menus.secondary }}
-            <nav class="site-nav">
-                <ul>
-                    {{ range . }}
-                        <li><a href="{{ .URL | relURL }}">{{ .Name }}</a></li>
-                    {{ end }}
-                </ul>
-            </nav>
-		{{ end }}
-	</div>
 
+    <!-- Bottom Nav  -->
+	<!-- <div class="bottom-nav"> -->
+	<!-- 	{{ with .Site.Menus.secondary }} -->
+    <!--         <nav class="site-nav"> -->
+    <!--             <ul> -->
+    <!--                 {{ range . }} -->
+    <!--                     <li><a href="{{ .URL | relURL }}">{{ .Name }}</a></li> -->
+    <!--                 {{ end }} -->
+    <!--             </ul> -->
+    <!--         </nav> -->
+	<!-- 	{{ end }} -->
+	<!-- </div> -->
+
+    <p> Made with <b>Hugo</b> and <b>Org-mode</b>. </p>
+    <!-- <p>·͙*̩̩͙˚̩̥̩̥*̩̩̥͙　✩　*̩̩̥͙˚̩̥̩̥*̩̩͙‧͙ </p> -->
 
 	{{ if eq .IsPage true }}
 		{{ if (or (eq .Section "articles") (eq .Section "logs") (eq .Section "keyboards")) }}
 			{{ partial "comments.html" }}
 		{{ end }}
 	{{ end }}
+
 </footer>

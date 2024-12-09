@@ -1,11 +1,40 @@
 {{ define "main" }}
 <!-- Copy of list.html -->
 <main>
-	<div class="blog-list">
-		{{ $paginator := .Paginate (where .Site.RegularPages "Type" "in" .Site.Params.mainSections) }}
-		{{ range .Paginator.Pages }}
-		{{ .Render "summary" }}
-		{{ end }}
-	</div>
+    <section>
+        <h2> Recent Articles </h2>
+        {{ $limit := .Site.Params.recentArticlesLimit }}
+        {{ $articles := first $limit (where .Site.RegularPages "Type" "in" .Site.Params.mainSections) }}
+        {{ range $articles }}
+        <div>
+          {{ .Render "summary" }}
+        </div>
+        {{ end }}
+        <br/>
+        <a href="/articles">All Articles -></a>
+    <section>
+
+    <section>
+      <h2> Other Intereseting Stuff </h2>
+
+      <ul>
+        {{ range .Site.Menus.secondary }}
+            <li>
+                <a href="{{ .URL | relURL }}" {{ if .Params.external }}target="_blank" rel="noopener noreferrer"{{ end }}>
+                {{ .Name }}
+                </a>
+            </li>
+        {{ end }}
+      </ul>
+    </section>
+
+    <section>
+      <h2> Contact </h2>
+      <ul>
+          <li> contact [at] thisdomain </li>
+          <li> <a href="@mrprofessor@fosstodon.org"> Mastodon </a> </li>
+
+      </ul>
+    </section>
 </main>
 {{ end }}
