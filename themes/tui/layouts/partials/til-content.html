@@ -1,5 +1,5 @@
  <div class="til-list">
-    {{ $content := .Content }}
+   {{ $content := .Content }}
 
     <!-- Extract the first <p> tag (Intro) -->
     {{ $intro := index (findRE `<p>([^<]*)</p>` .Content 1) 0 }}
@@ -14,7 +14,7 @@
     {{ range $index, $section := after 1 $sections }}
         {{ $headerContent := index (findRE "id=\"([^\"]+)\">([^<]+)" $section) 0 }} <!-- Extract id and title from h3 tag -->
         {{ $title := index (findRE ">([^<]+)" $headerContent) 0 | replaceRE ">" "" | strings.TrimSpace }} <!-- Extract title from h3 tag -->
-        {{ $postContent := replaceRE "id=\"[^\"]+\">[^<]+</h3>" "" $section }} <!-- Remove h3 tag -->
+        {{ $postContent := replaceRE "id=\"[^\"]+\">[^<]+</h2>" "" $section }} <!-- Remove h3 tag -->
         <details>
             <summary class="post-title" >{{ $title }}</summary>
             {{ $postContent | safeHTML }}
