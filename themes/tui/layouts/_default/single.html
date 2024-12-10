@@ -1,7 +1,6 @@
 {{ define "main" }}
 	<main>
 		<article>
-			{{ partial "article-header.html" . }}
 			{{ if (and (eq .IsPage true) (eq .Path "/til")) }}
 				{{ partial "til-content.html" . }}
 			{{ else }}

@@ -1,6 +1,6 @@
 /**! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Load Font */
-/* @import url("https://cdn.jsdelivr.net/gh/aymanbagabas/iosevka-fonts@v6.1.2/dist/iosevka/iosevka.min.css"); */
+ /* @import url("https://cdn.jsdelivr.net/gh/aymanbagabas/iosevka-fonts@v6.1.2/dist/iosevka/iosevka.min.css");  */
 
 /* Document
    ========================================================================= */
@@ -357,12 +357,11 @@ template {
     --bg: #fff;
     --bg-bright: #eee;
     --fg: #111;
-    --link: #00f;
-    --code: #f00;
+    /* --link: #00f; */
+    --link: teal;
+    --code: #ffb454;
     --border: #ccc;
-    /* --link: #f93a3a; */
-    /* --code: #ffb454; */
-    --font-stack: Iosevka,
+    --font-stack: Iosevka web,
                   Menlo,
                   Consolas,
                   Monaco,
@@ -384,7 +383,7 @@ body {
     background-color: var(--bg);
     color: var(--fg);
     font-family: var(--font-stack);
-    font-size: 0.9rem;
+    font-size: .9rem;
     line-height: 1.5;
     max-width: 50em;
     margin: 0 auto;
@@ -540,11 +539,9 @@ blockquote p {
     border: 1px dotted var(--fg);
     border-top: none;
     padding: 1rem;
-    box-shadow: 7px 7px 0px var(--bg-bright);
+    box-shadow: 7px 7px 0px var(--link);
+    margin-bottom: 2rem;
 }
-     /* text-align: center;  */
-     /* background-color: #f2b6c0;  */
-     /* box-shadow: 7px 7px 0px #a8d0e6;  */
 
 .post-metadata h1 {
     margin: 0;
@@ -646,7 +643,7 @@ details p {
         --bg: #141617;
         --bg-bright: #191c1d;
         --fg: #b2aea9;
-        --link: #fc6c1c;
+        /* --link: #fc6c1c; */
         --code: #ffb454;
         --border: #333;
     }

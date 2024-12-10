@@ -1,9 +1,8 @@
 {{ define "main" }}
     <main>
-        <div class="blog-list">
+            <p></p> <!-- Unnessary hack: Empty paragraph for spacing -->
             {{ range .Paginator.Pages }}
-                <div>{{ .Render "summary" }}</div>
+                {{ .Render "summary" }}
             {{ end }}
-        </div>
     </main>
 {{ end }}

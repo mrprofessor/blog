@@ -1,21 +1,38 @@
 <header>
-  <section>
-    <div class="title-wrapper">
-      <nav class="site-nav">
-        <ul>
-          {{ range .Site.Menus.main }}
-          <li {{ if and (ne (.URL | relURL) "/") (hasPrefix $.Page.Path (.URL | relURL)) }} class="current-nav" {{ end }}
-              {{ if and (eq (.URL | relURL) "/") (eq $.Page.Path "/") }} class="current-nav" {{ end }}>
-            <a href="{{ .URL | relURL }}" {{ if .Params.external }}target="_blank" rel="noopener noreferrer"{{ end }}>
-              {{ .Name }}
-            </a>
-          </li>
-          {{ end }}
-        </ul>
-      </nav>
-      <a href="/" class="title-link">
-        {{ if not .IsPage }}<h1>{{ .Site.Title }}</h1>{{ end }}
-      </a>
-    </div>
-  </section>
+    <section>
+        <div class="title-wrapper">
+            <nav class="site-nav">
+                <ul>
+                {{ range .Site.Menus.main }}
+                    <li {{ if and (ne (.URL | relURL) "/") (hasPrefix $.Page.Path (.URL | relURL)) }} class="current-nav" {{ end }}
+                    {{ if and (eq (.URL | relURL) "/") (eq $.Page.Path "/") }} class="current-nav" {{ end }}>
+                    <a href="{{ .URL | relURL }}" {{ if .Params.external }}target="_blank" rel="noopener noreferrer"{{ end }}>
+                        {{ .Name }}
+                    </a>
+                    </li>
+                {{ end }}
+                </ul>
+            </nav>
+
+
+            {{ if .IsHome }}
+                <section class="post-metadata">
+                  <a href="/" class="title-link"><h1>{{ .Site.Title }}</h1></a>
+                  </section>
+            {{ else }} 
+                <section class="post-metadata">
+                    <h1 class="post__title">{{ .Title }}</h1>
+                    {{ if .Date }}
+                        <time>{{ .Date.Format "Jan 02, 2006" }}</time>
+                    {{ else }}
+                        <span> Last Modified: </span><time>{{ .Lastmod.Format "Jan 02, 2006" }}</time>
+                    {{ end }}
+
+                    {{ partial "tagbar.html" }}
+                </section>
+            {{ end }}
+        </div>
+    </section>
 </header>
+
+
