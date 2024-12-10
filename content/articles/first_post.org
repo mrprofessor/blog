@@ -1,6 +1,5 @@
 #+TITLE: Org Mode Features
 #+AUTHOR: rkar
-#+WEIGHT: 10
 #+DATE: 2023-12-25
 
 * Introduction

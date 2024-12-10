@@ -1,17 +1,10 @@
-#+hugo_base_dir: ../
-#+hugo_section: til
-#+hugo_type: til
+#+TITLE: TIL
 #+author: rkar
-
-* TIL
-:PROPERTIES:
-:CUSTOM_ID: til
-:END:
 
 Tidbits, tips, things I read recently etc.
 
 
-** 2024/12/06 - Debugging Hugo pages
+* 2024/12/06 - Debugging Hugo pages
 :PROPERTIES:
 :CUSTOM_ID: 2024-12-05-debugging-hugo-pages
 :END:
@@ -33,7 +26,7 @@ I prefer =<textarea>= because it provides an easy way to view and
 expand the output using the browser's resize handle.
 
 
-** 2024/12/03 - Trace in Haskell
+* 2024/12/03 - Trace in Haskell
 :PROPERTIES:
 :CUSTOM_ID: 2024-12-03-trace-in-haskell
 :END:
@@ -79,7 +72,7 @@ variable's value is evaluated, =trace= logs the message. For example:
   21
 #+end_src
 
-** 2024/12/01 - MongoDB Database Creation
+* 2024/12/01 - MongoDB Database Creation
 :PROPERTIES:
 :CUSTOM_ID: 2024-12-01-mongodb-database-creation
 :END:

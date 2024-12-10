@@ -1,19 +1,21 @@
 <header>
-  <div class="title-wrapper">
-        <nav class="site-nav">
-            <ul>
-                {{ range .Site.Menus.main }}
-                    <li {{ if and (ne (.URL | relURL) "/") (hasPrefix $.Page.Path (.URL | relURL)) }} class="current-nav" {{ end }}
-                        {{ if and (eq (.URL | relURL) "/") (eq $.Page.Path "/") }} class="current-nav" {{ end }}>
-                      <a href="{{ .URL | relURL }}" {{ if .Params.external }}target="_blank" rel="noopener noreferrer"{{ end }}>
-                        {{ .Name }}
-                      </a>
-                    </li>
-                {{ end }}
-            </ul>
-        </nav>
-        <a href="/" class="title-link">
-            {{ if not .IsPage }}<h1>{{ .Site.Title }}</h1>{{ end }}
-        </a>
-  </div>
+  <section>
+    <div class="title-wrapper">
+      <nav class="site-nav">
+        <ul>
+          {{ range .Site.Menus.main }}
+          <li {{ if and (ne (.URL | relURL) "/") (hasPrefix $.Page.Path (.URL | relURL)) }} class="current-nav" {{ end }}
+              {{ if and (eq (.URL | relURL) "/") (eq $.Page.Path "/") }} class="current-nav" {{ end }}>
+            <a href="{{ .URL | relURL }}" {{ if .Params.external }}target="_blank" rel="noopener noreferrer"{{ end }}>
+              {{ .Name }}
+            </a>
+          </li>
+          {{ end }}
+        </ul>
+      </nav>
+      <a href="/" class="title-link">
+        {{ if not .IsPage }}<h1>{{ .Site.Title }}</h1>{{ end }}
+      </a>
+    </div>
+  </section>
 </header>

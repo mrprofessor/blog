@@ -1,13 +1,5 @@
-#+hugo_base_dir: ../
-#+hugo_section: about
+#+TITLE: About
 #+author: rkar
-
-* About
-   :PROPERTIES:
-   :EXPORT_FILE_NAME: _index
-   :EXPORT_HUGO_LAYOUT: single
-   :CUSTOM_ID: about
-   :END:
 
 I build expansive and scalable web applications at work. At home, I
 aspire to create tiny, useful applications – the kind that don't

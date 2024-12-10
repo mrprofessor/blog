@@ -1,6 +1,5 @@
 #+TITLE: A second example post
 #+AUTHOR: rkar
-#+WEIGHT: 10
 #+DATE: 2023-12-01
 
 * Introduction

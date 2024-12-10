@@ -1,20 +1,13 @@
-#+hugo_base_dir: ../
-#+hugo_section: uses
+#+TITLE: Uses
 #+author: rkar
 
-* Uses
-   :PROPERTIES:
-   :EXPORT_FILE_NAME: _index
-   :EXPORT_HUGO_LAYOUT: single
-   :CUSTOM_ID: uses
-   :END:
 
 In my everyday tasks, I rely on a variety of tools to get things
 done. While some may not be universally regarded as the best, they’ve
 proven for effective for me. Ultimately, what matters is finding tools
 that suit your needs and preferences.
 
-** Software
+* Software
 :PROPERTIES:
 :CUSTOM_ID: software
 :END:
@@ -22,10 +15,10 @@ that suit your needs and preferences.
 + *Text Editor* - [[https://emacs.rkar.org][Emacs]], Zed
 + *Terminal Emulator* - WezTerm
 + *Web Browser* - Safari, Brave
-+ *Misc* - Org-Roam, Zsh, [[https://httpie.io][Httpie]]
++ *Misc* - Zsh, Obsidian, [[https://httpie.io][Httpie]]
 + *Window Manager* - [[https://github.com/nikitabobko/AeroSpace][Aerospace]]
 
-** Hardware
+* Hardware
 :PROPERTIES:
 :CUSTOM_ID: hardware
 :END:
@@ -40,8 +33,7 @@ that suit your needs and preferences.
 + *Phone* - iPhone 14
 + *Camera* - Nikon D3500 + Kit Lens
 
-
-** Ancient History
+* Ancient History
 :PROPERTIES:
 :CUSTOM_ID: ancient-history
 :END:
@@ -49,3 +41,4 @@ that suit your needs and preferences.
 + *iTerm 2* - Not as feature rich as WezTerm/Kitty.
 + *Logseq* - Started to show its performance issues with large notes.
 + *Notion* - Great for databases, but not for everyday notes. Also, slow.
++ *Org-Roam* - Real PITA to take notes on a remote device.
