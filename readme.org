@@ -1,0 +1,6 @@
+* blog
+:PROPERTIES:
+:CUSTOM_ID: blog
+:END:
+
+Articles and other things

@@ -2,8 +2,6 @@ baseURL = "https://rkar.org/"
 languageCode = "en-us"
 DefaultContentLanguage = "en"
 
-pygmentsCodefences = true
-pygmentsStyle = "emacs"
 paginate = 30
 
 title = "rkar.org"
@@ -16,7 +14,6 @@ canonifyURLs = true
 
 publishDir = "docs"
 summaryLength = 99999999
-
 
 [menu]
 
@@ -92,6 +89,20 @@ summaryLength = 99999999
     ordered = true
   [markup.goldmark.renderer]
     unsafe = true
+  [markup.highlight]
+    anchorLineNos = false
+    codeFences = true
+    guessSyntax = false
+    hl_Lines = ''
+    hl_inline = false
+    lineAnchors = ''
+    lineNoStart = 1
+    lineNos = false
+    lineNumbersInTable = true
+    noClasses = true
+    noHl = false
+    style = 'emacs'
+    tabWidth = 4
 
 [outputs]
   home = ['html', 'rss']

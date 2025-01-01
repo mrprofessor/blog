@@ -1,0 +1,311 @@
+#+TITLE: Elegance is in the Eye of the Beholder
+#+AUTHOR: rkar
+#+DATE: 2024-12-08
+
+* Introduction
+:PROPERTIES:
+:CUSTOM_ID: introduction
+:END:
+
+[[https:go.dev][Go]] recently added support for a syntax that a fellow gopher had
+requested 12 years ago on the [[https://groups.google.com/g/golang-nuts/c/7J8FY07dkW0/m/iwSs6_Q3AAAJ][forum]]. The OP proposed a range syntax
+for Go that was "simpler" than the traditional C-like iteration.
+
+The discussion that followed highlighted an interesting divide - while
+a few found the proposed syntax cleaner, others argued that the
+traditional C-style loop was more explicit and natural, especially for
+developers with C background. This debate about what makes loop syntax
+"elegant" has historical roots.
+
+This article explores various loop syntaxes that have existed
+throughout programming language history, showing how different
+languages approached the seemingly simple task of iteration.
+
+* A Few Examples
+:PROPERTIES:
+:CUSTOM_ID: a-few-examples
+:END:
+
+*The test case*: The program must loop through a range of integers (0
+to 5) and print each integer to the screen.
+
+FORTRAN (1957) was actually the pioneer in implementing range-based
+iteration with its DO loop:
+
+#+begin_src fortran
+ DO 10 I = 0, 5
+     PRINT *, I
+ 10 CONTINUE
+#+end_src
+
+While this syntax (the lack of compound statements) might seem unusual
+in modern times, it laid the groundwork for range-based iteration
+in programming languages.
+
+ALGOL 60 (based on ALGOL 58) followed and was the first programming
+language implementing compound statements such as (for, If Else, DO
+While etc.). Many languages we use today are influenced by the designs
+of ALGOL 60.
+
+#+begin_src algol60
+  begin
+      procedure printRange(n); value n; integer n;
+      begin
+          integer i;
+          for i := 0 step 1 until n do
+              outinteger(1, i)
+      end;
+      
+      printRange(5)
+  end
+#+end_src
+
+Let's focus on the =for= syntax. In the =for= statement, the variable
+=i= is initialized to =0=, and a range (=n=) is defined for the
+loop. Explicitly =i= is incremented by one on each iteration.
+
+
+Pascal (1970) took a different approach. The syntax simplified the
+iteration by making the counter increment implicit. When writing ~for
+i:=0 to N~, the compiler automatically handles incrementing =i= by one
+on each iteration.
+
+#+begin_src pas
+  program PrintNumbers;
+ 
+  procedure PrintRange(N: integer);
+  var
+    i: integer;
+  begin
+    for i := 0 to N do
+      writeln(i);
+  end;
+ 
+  begin
+    PrintRange(5);
+  end.
+#+end_src
+
+
+The C syntax, however, followed the ALGOL way of doing the iterations
+and added explicit control on how the increment works, providing
+greater flexibility.
+
+#+begin_src c
+  for (int i = 0; i <= n; i++) { printf("%d\n", i); }
+#+end_src
+
+The C =for= loop has an initialization (~int i = 0~), an update
+(=i++=), and a range (~i <= n~). The initialization can initialize
+multiple variables and the update can describe any update such as
+increment, decrement, incrementing by two etc.
+
+e.g.
+
+#+begin_src c
+  for (int i = 0; i <= 5; i++) { ... }             // Incrementing a counter
+  for (int i = 5; i > 0; i--) { ... }              // Decrementing a value
+  for (int i = 0, j = 5; i < j; i++, j--) { ... }  // Updating multiple variables
+#+end_src
+
+The C-style =for= loop has been widely adopted by other languages such
+as Java, C#, JavaScript, and Go.
+
+While C's approach prioritized explicit control over iteration, Python
+adopted a different philosophy. Instead of exposing the mechanics of
+how to iterate (initialization, condition, update), Python's design
+focused on expressing what to iterate over. A very Mathematical
+approach at it.
+
+Python, which the OP referenced, borrowed its loop syntax from ABC, a
+language that was itself inspired by SETL.[fn:1] [fn:2]
+
+#+begin_src python
+  for i in range(5): print(i)
+#+end_src
+
+Many modern languages including Ruby, Rust, Kotlin, Swift, Scala, and
+Julia use a similar syntax for iterating through a sequence of
+numbers.
+
+For example, in Rust, instead of using range(N) it uses the =..=
+notation to denote a Set.
+
+#+begin_src rust
+  for i in 0..=5 { println!("{}", i); }
+#+end_src
+
+
+* What Makes a Syntax Elegant?
+:PROPERTIES:
+:CUSTOM_ID: what-makes-a-syntax-elegant
+:END:
+
+A quick Google search shows how many times this question has been
+asked in different forums[fn:3] and the diverse nature of answers to
+it. Honestly! What makes a painting, poem, or prose elegant? People
+have been trying to formulate theories to quantify it[fn:4]. I think
+it can be quite quite subjective.
+
+** Resemblance to Natural Languages
+:PROPERTIES:
+:CUSTOM_ID: resemblance-to-natural-language
+:END:
+
+A programming language consists of syntax (form), semantics (meaning),
+and pragmatics (uses)[fn:5]. The syntax of a programming language is
+usually defined by a formal language[fn:6], which has been evolving
+since its inception.
+
+Formal languages strive for precision and unambiguity while attempting
+to stay close to natural languages. Languages that favor humans by
+being closer to natural language (such as English and French) are
+termed high-level, while those oriented towards machines are termed
+low-level.
+
+The tension between precision and natural expression is evident in how
+different languages handle loops. Pascal's =to= and Python's =in=
+keyword try to mirror the natural language patterns, while C's
+increment operator =++= and =--= embraces mathematical notation. ALGOL
+60's approach =step 1 until= shows an attempt to balance both the
+methods.
+
+At the same time, being close to a natural language doesn't always
+mean that it's simpler to understand.[fn:7]
+
+** Expressiveness and Abstraction
+:PROPERTIES:
+:CUSTOM_ID: expressiveness-and-abstraction
+:END:
+
+Languages like Python and Ruby focus on what the programmer wants to
+do, i.e. =for x in items=, whereas C exposes the mechanism =for(init;
+condition; update)=. While the former approach is succinct, the latter
+is more precise and provides more control.
+
+This trade-off between abstraction and control shows up in different
+scenarios. When iterating over a collection of items, Python's
+approach shines.
+
+#+begin_src python
+  for user in users: # Clear intent send_mail(user)
+#+end_src
+
+versus C's more mechanical approach
+
+#+begin_src c
+  for(int i = 0; i < n_users; i++) { // Mechanism exposed
+      send_email(users[i]); }
+#+end_src
+
+Note that Python doesn't expose the update index. So in order to
+access the index it provides a built-in function enumerate[fn:8].
+
+However, when fine-grained control is needed, C's explicit approach
+becomes valuable:
+
+#+begin_src c
+  for(int i = 0; i < n; i += 2) { // Skip every other element
+      process(array[i]); }
+#+end_src
+
+The level of abstraction often reflects the language's intended use
+(pragmatics). Systems programming languages like C usually prioritize
+control and performance, while languages designed for rapid
+development like Python emphasize developer productivity through
+higher abstractions.
+
+
+** Consistency with Language Philosophy
+:PROPERTIES:
+:CUSTOM_ID: consistency-with-language-philosophy
+:END:
+
+Programming languages, like natural languages, evolve with certain
+philosophies and principles. Python emphasizes readability and clarity
+of intent - Instead of showing how to iterate, it lets the programmer
+express what is being iterated over. C's philosophy of trusting the
+programmer is evident in its syntax, where every aspect of the
+iteration is under the programmer's control.
+
+The differences in range syntax between Rust (=0..=5=) and Haskell
+(=0..5=) reflect their different philosophies. Rust, being a systems
+language focused on correctness and the principle of least
+astonishment[fn:9], uses =..== to explicitly denote an inclusive
+range - similar to mathematical notation [0,5]. Haskell, following
+mathematical conventions where ranges are typically inclusive by
+default, uses the simpler =..= notation.
+
+These design choices extend beyond just loops - they reflect each
+language's broader goals and principles. Python prioritizes
+readability, C emphasizes control, while Rust and Haskell align with
+different mathematical traditions.
+
+** Familiarity with One's First Programming Language
+:PROPERTIES:
+:CUSTOM_ID: familiarity-with-one-s-first-programming-language
+:END:
+
+The debate in the Go forum perfectly illustrates how our first
+programming language shapes our perception of elegance. The C
+programmer found the traditional =for(init; condition; update)= more
+natural and clear, while those familiar with Python preferred the
+range-based iteration.
+
+This doesn't surprise me - Our first programming language forms our
+initial mental model of how programming should work. Just as native
+speakers of different natural languages think differently about
+expression, programmers from different language backgrounds approach
+problems with different expectations of what looks "right". (And, yes
+I am something of a linguist myself.)
+
+[[https://en.wikipedia.org/wiki/Richard_Wexelblat][Richard Wexelblat]][fn:10] conducted an informal survey in 1980 and
+concluded that one's first programming language influences their
+fundamental approach to problem-solving in programming[fn:11]. Four
+decades later, the Go forum discussion shows this observation still
+holds true.
+
+* Final Thoughts
+:PROPERTIES:
+:CUSTOM_ID: final-thoughts
+:END:
+
+Well, this is the hardest part of my articles. What do I think about
+elegant languages? I do not know honestly. I prefer to use something
+like Python until I need more control. I wish for programming
+languages with syntax that supports both approaches. Maybe Go is
+heading towards that future.
+
+But perhaps that is the point - just as beauty lies in the eye of the
+beholder, what makes a programming language elegant is deeply personal
+and can vary. It is shaped by one's first programming experience, the
+problem domain, and even our mental model of computation. Maybe there
+is not one "elegant" solution, but rather different forms of elegance
+for different contexts and programmers.
+
+*Footnotes*
+
+[fn:1] The origins of Python. [[https://inference-review.com/article/the-origins-of-python][source]]
+[fn:2] Range literals and SETL. [[https://web.archive.org/web/20180714064019/https://mail.python.org/pipermail/python-dev/2000-August/008881.html][source]]
+[fn:3] A few discussions that showcase diverse perspectives: [[https://www.reddit.com/r/learnprogramming/comments/1yoexm/what_makes_a_programming_language_elegant/][reddit]],
+[[https://stackoverflow.com/questions/1812225/what-makes-ruby-an-elegant-language][stackoverflow]], [[https://news.ycombinator.com/item?id=29715237][HN]]
+[fn:4] Assessing elegance in writing: An English professor's attempt
+to quantify beauty through rubrics, while acknowledging inherent
+subjectivity. Originally published in "The American Scholar" (2016)
+[[https://theamericanscholar.org/on-grading/][source]]
+[fn:5] Tennent, R. D. (1981). Principles of programming
+languages. Prentice/Hall International. pp. 1-3. ISBN: 0137098731
+[fn:6] Please don't let Elon take-over the Wikipedia [[https://en.wikipedia.org/wiki/Formal_language][source]]
+[fn:7] Pancake Stack is an esoteric programming language that requires
+you to manipulate a stack of pancakes. [[https://esolangs.org/wiki/Pancake_Stack][source]]
+[fn:8] PEP 279 – The enumerate() built-in function. [[https://peps.python.org/pep-0279/][source]]
+[fn:9] The Principle of Least Astonishment states that the result of
+performing some operation should be obvious, consistent, and
+predictable, based upon the name of the operation and other
+clues. [[https://wiki.c2.com/?PrincipleOfLeastAstonishment][source]]
+[fn:10] Richard Wexelblat is credited with receiving the first
+computer science PhD in 1965. [[https://cacm.acm.org/blogcacm/who-earned-first-computer-science-ph-d/][source]]
+[fn:11] Wexelblat, R. L. (1980). The consequences of one’s first
+programming language. Proceedings of the 3rd ACM SIGSMALL Symposium
+and the First SIGPC Symposium on Small Systems,
+52–55. https://doi.org/10.1145/800088.802823
