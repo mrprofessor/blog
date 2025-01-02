@@ -355,10 +355,9 @@ template {
 
 /* CUSTOM CSS */
 :root {
-    --bg: #fff;
-    --bg-bright: #eee;
+    --bg: #FFFFFF;
+    --bg-bright: #EEEEEE;
     --fg: #111;
-    /* --link: #00f; */
     --link: teal;
     --code: #fc6c1c;
     --border: #ccc;
@@ -371,8 +370,6 @@ template {
                   monospace;
 }
 
-body {
-}
 
 @media (prefers-reduced-motion: no-preference) {
     :root {
@@ -597,17 +594,16 @@ span.tag::before {
 }
 
 /* Show language name in code blocks */
-.highlight code[data-lang],
-.chroma code[data-lang] {
-  position: relative;
+pre[class*="highlight"] code[data-lang],
+div[class*="highlight"] code[data-lang] {
+  position: relative !important;
 }
 
 /* Display the language from the data-lang attribute */
-.highlight code[data-lang]:before,
-.chroma code[data-lang]:before {
-  content: attr(data-lang);
-  position: absolute;
-  top: 6px;
+pre[class*="highlight"] code[data-lang]::before,
+div[class*="highlight"] code[data-lang]::before {
+  content: attr(data-lang) !important;
+  position: absolute !important;
   right: 8px;
   font-size: 0.75rem;
   color: var(--fg);
@@ -615,6 +611,7 @@ span.tag::before {
   padding: 2px 6px;
   border-radius: 4px;
   opacity: 0.5;
+  z-index: 1;
 }
 
 
@@ -669,13 +666,41 @@ details p {
     line-height: 1.6;
 }
 
-@media (prefers-color-scheme: dark) {
-    :root {
-        --bg: #141617;
-        --bg-bright: #191c1d;
-        --fg: #b2aea9;
-        /* --link: #fc6c1c; */
-        --code: #ffb454;
-        --border: #333;
-    }
+
+/* Dark mode
+    ========================================================================= */
+
+/* @media (prefers-color-scheme: dark) { */
+/*     :root { */
+/*         --bg: #141617; */
+/*         --bg-bright: #191c1d; */
+/*         --fg: #b2aea9; */
+/*         --code: #ffb454; */
+/*         --border: #333; */
+/*     } */
+/* } */
+
+.dark-mode {
+    --bg: #141617;
+    --bg-bright: #191c1d;
+    --fg: #b2aea9;
+    --code: #ffb454;
+    --border: #333;
+}
+
+/* Add to your CSS */
+.dark-mode-toggle {
+    color: var(--code);
+    appearance: none;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+/* Default state (light mode) */
+.dark-mode-toggle::before {
+    content: "[\263D]";
+}
+
+.dark-mode-toggle:checked::before {
+    content: "[\263C]";
 }

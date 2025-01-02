@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
     <!-- Favicon -->
-    <!-- {{ with .Site.Params.favicon }}<link rel="icon" type="image/png" href="{{ . }}" />{{ end }} -->
+    {{ with .Site.Params.favicon }}<link rel="icon" type="image/png" href="{{ . }}" />{{ end }}
 
     {{ if eq .IsPage true }}
     <title itemprop="name">{{ .Title }}</title>
@@ -37,5 +37,8 @@
       {{ partial "footer" . }}
     </div>
   </body>
+
+  {{ $scripts := resources.Get "js/scripts.js" | js.Build | minify | fingerprint }}
+  <script src="{{ $scripts.RelPermalink }}" integrity="{{ $scripts.Data.Integrity }}"></script>
 </html>
 

@@ -11,9 +11,12 @@
                     </a>
                     </li>
                 {{ end }}
+                    <li class="dark-mode-toggle-wrapper">
+                        <input id="dark-mode-toggle" type="checkbox" class="dark-mode-toggle">
+                        <label for="dark-mode-toggle" class="dark-mode-label"></label>
+                    </li>
                 </ul>
             </nav>
-
 
             {{ if .IsHome }}
                 <section class="post-metadata">

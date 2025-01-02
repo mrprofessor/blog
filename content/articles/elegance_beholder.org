@@ -33,9 +33,9 @@ FORTRAN (1957) was actually the pioneer in implementing range-based
 iteration with its DO loop:
 
 #+begin_src fortran
- DO 10 I = 0, 5
-     PRINT *, I
- 10 CONTINUE
+  DO 10 I = 0, 5
+      PRINT *, I
+  10 CONTINUE
 #+end_src
 
 While this syntax (the lack of compound statements) might seem unusual
@@ -60,7 +60,7 @@ of ALGOL 60.
   end
 #+end_src
 
-Let's focus on the =for= syntax. In the =for= statement, the variable
+Let us focus on the =for= syntax. In the =for= statement, the variable
 =i= is initialized to =0=, and a range (=n=) is defined for the
 loop. Explicitly =i= is incremented by one on each iteration.
 
@@ -72,7 +72,7 @@ on each iteration.
 
 #+begin_src pas
   program PrintNumbers;
- 
+
   procedure PrintRange(N: integer);
   var
     i: integer;
@@ -80,7 +80,7 @@ on each iteration.
     for i := 0 to N do
       writeln(i);
   end;
- 
+
   begin
     PrintRange(5);
   end.
@@ -170,8 +170,8 @@ increment operator =++= and =--= embraces mathematical notation. ALGOL
 60's approach =step 1 until= shows an attempt to balance both the
 methods.
 
-At the same time, being close to a natural language doesn't always
-mean that it's simpler to understand.[fn:7]
+At the same time, being close to a natural language does not always
+mean that it is simpler to understand.[fn:7]
 
 ** Expressiveness and Abstraction
 :PROPERTIES:
@@ -198,7 +198,7 @@ versus C's more mechanical approach
       send_email(users[i]); }
 #+end_src
 
-Note that Python doesn't expose the update index. So in order to
+Note that Python does not expose the update index. So in order to
 access the index it provides a built-in function enumerate[fn:8].
 
 However, when fine-grained control is needed, C's explicit approach
@@ -252,7 +252,7 @@ programmer found the traditional =for(init; condition; update)= more
 natural and clear, while those familiar with Python preferred the
 range-based iteration.
 
-This doesn't surprise me - Our first programming language forms our
+This does not surprise me - Our first programming language forms our
 initial mental model of how programming should work. Just as native
 speakers of different natural languages think differently about
 expression, programmers from different language backgrounds approach
@@ -278,10 +278,10 @@ heading towards that future.
 
 But perhaps that is the point - just as beauty lies in the eye of the
 beholder, what makes a programming language elegant is deeply personal
-and can vary. It is shaped by one's first programming experience, the
-problem domain, and even our mental model of computation. Maybe there
-is not one "elegant" solution, but rather different forms of elegance
-for different contexts and programmers.
+and can vary widely. It is shaped by one's first programming
+experience, the problem domain, and even our mental model of
+computation. Maybe there is not one "elegant" solution, but rather
+different forms of elegance for different contexts and programmers.
 
 *Footnotes*
 
@@ -295,7 +295,7 @@ subjectivity. Originally published in "The American Scholar" (2016)
 [[https://theamericanscholar.org/on-grading/][source]]
 [fn:5] Tennent, R. D. (1981). Principles of programming
 languages. Prentice/Hall International. pp. 1-3. ISBN: 0137098731
-[fn:6] Please don't let Elon take-over the Wikipedia [[https://en.wikipedia.org/wiki/Formal_language][source]]
+[fn:6] Please do not let Elon take-over the Wikipedia [[https://en.wikipedia.org/wiki/Formal_language][source]]
 [fn:7] Pancake Stack is an esoteric programming language that requires
 you to manipulate a stack of pancakes. [[https://esolangs.org/wiki/Pancake_Stack][source]]
 [fn:8] PEP 279 – The enumerate() built-in function. [[https://peps.python.org/pep-0279/][source]]

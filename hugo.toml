@@ -67,14 +67,13 @@ summaryLength = 99999999
     weight = 13
     params.external = true
 
-
 [params]
   author = "rkar"
   description = ""
   sitename = "rkar blog"
   github = "https://github.com/mrprofessor"
   twitter = "@weary_beard"
-  favicon = "/images/favicon.ico"
+  favicon = "/images/favicon/favicon.ico"
   mainSections = "articles"
   recentArticlesLimit = 3
 
