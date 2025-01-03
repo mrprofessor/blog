@@ -285,26 +285,26 @@ different forms of elegance for different contexts and programmers.
 
 *Footnotes*
 
-[fn:1] The origins of Python. [[https://inference-review.com/article/the-origins-of-python][source]]
-[fn:2] Range literals and SETL. [[https://web.archive.org/web/20180714064019/https://mail.python.org/pipermail/python-dev/2000-August/008881.html][source]]
+[fn:1] The origins of Python. [[https://inference-review.com/article/the-origins-of-python][↩]]
+[fn:2] Range literals and SETL. [[https://web.archive.org/web/20180714064019/https://mail.python.org/pipermail/python-dev/2000-August/008881.html][↩]]
 [fn:3] A few discussions that showcase diverse perspectives: [[https://www.reddit.com/r/learnprogramming/comments/1yoexm/what_makes_a_programming_language_elegant/][reddit]],
 [[https://stackoverflow.com/questions/1812225/what-makes-ruby-an-elegant-language][stackoverflow]], [[https://news.ycombinator.com/item?id=29715237][HN]]
 [fn:4] Assessing elegance in writing: An English professor's attempt
 to quantify beauty through rubrics, while acknowledging inherent
-subjectivity. Originally published in "The American Scholar" (2016)
-[[https://theamericanscholar.org/on-grading/][source]]
+subjectivity. Originally published in "The American Scholar" (2016).
+[[https://theamericanscholar.org/on-grading/][↩]]
 [fn:5] Tennent, R. D. (1981). Principles of programming
 languages. Prentice/Hall International. pp. 1-3. ISBN: 0137098731
-[fn:6] Please do not let Elon take-over the Wikipedia [[https://en.wikipedia.org/wiki/Formal_language][source]]
+[fn:6] Please do not let Elon take-over the Wikipedia. [[https://en.wikipedia.org/wiki/Formal_language][↩]]
 [fn:7] Pancake Stack is an esoteric programming language that requires
-you to manipulate a stack of pancakes. [[https://esolangs.org/wiki/Pancake_Stack][source]]
-[fn:8] PEP 279 – The enumerate() built-in function. [[https://peps.python.org/pep-0279/][source]]
+you to manipulate a stack of pancakes. [[https://esolangs.org/wiki/Pancake_Stack][↩]]
+[fn:8] PEP 279 – The enumerate() built-in function. [[https://peps.python.org/pep-0279/][↩]]
 [fn:9] The Principle of Least Astonishment states that the result of
 performing some operation should be obvious, consistent, and
 predictable, based upon the name of the operation and other
-clues. [[https://wiki.c2.com/?PrincipleOfLeastAstonishment][source]]
+clues. [[https://wiki.c2.com/?PrincipleOfLeastAstonishment][↩]]
 [fn:10] Richard Wexelblat is credited with receiving the first
-computer science PhD in 1965. [[https://cacm.acm.org/blogcacm/who-earned-first-computer-science-ph-d/][source]]
+computer science PhD in 1965. [[https://cacm.acm.org/blogcacm/who-earned-first-computer-science-ph-d/][↩]]
 [fn:11] Wexelblat, R. L. (1980). The consequences of one’s first
 programming language. Proceedings of the 3rd ACM SIGSMALL Symposium
 and the First SIGPC Symposium on Small Systems,
