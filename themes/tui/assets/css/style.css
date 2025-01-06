@@ -594,16 +594,15 @@ span.tag::before {
 }
 
 /* Show language name in code blocks */
-pre[class*="highlight"] code[data-lang],
-div[class*="highlight"] code[data-lang] {
-  position: relative !important;
+code[data-lang] {
+    position: relative;
+    display: block;
 }
 
 /* Display the language from the data-lang attribute */
-pre[class*="highlight"] code[data-lang]::before,
-div[class*="highlight"] code[data-lang]::before {
-  content: attr(data-lang) !important;
-  position: absolute !important;
+code[data-lang]::before {
+  content: attr(data-lang);
+  position: absolute;
   right: 8px;
   font-size: 0.75rem;
   color: var(--fg);
@@ -611,7 +610,7 @@ div[class*="highlight"] code[data-lang]::before {
   padding: 2px 6px;
   border-radius: 4px;
   opacity: 0.5;
-  z-index: 1;
+  z-index: 99999;
 }
 
 

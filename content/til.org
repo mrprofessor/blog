@@ -3,6 +3,28 @@
 
 Tidbits, tips, things I read recently etc.
 
+* 2025/01/07 - Find a process attached to a port
+:PROPERTIES:
+:CUSTOM_ID: 2025-01-07-find-a-process-attached-to-a-port
+:END:
+
+More often than not, I come across = EADDRINUSE: address already in
+use = while starting a local API. I used to google it and now use LLMs
+to find a quick solution. This time it felt weird. I felt like I
+should know this by heart, and here it goes.
+
+Find the process associated with the port:
+
+#+begin_src shell
+  lsof -i :<port_number>
+#+end_src
+
+Stop the process:
+
+#+begin_src shell
+  kill <PID>  # or kill -9 <PID> for force quit
+#+end_src
+
 
 * 2024/12/06 - Debugging Hugo pages
 :PROPERTIES:
