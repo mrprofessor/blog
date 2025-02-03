@@ -1,0 +1,16 @@
+#+TITLE: Projects
+#+author: rkar
+
+List of a few things I made.
+
+** Phoebe
+:PROPERTIES:
+:CUSTOM_ID: phoebe
+:END:
+
+Link: [[https:github.com/mrprofessor/phoebe][Source Code]]
+
+Named after my cat, Phoebe is an imperative programming language based
+on the semantics defined by Michael J. C. Gordon in [[https://doi.org/10.1007/978-1-4612-6228-2][The Denotational
+Description of Programming Languages]]. The language is implemented in
+Haskell, mirroring the semantics described in the book.
