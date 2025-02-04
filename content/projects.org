@@ -3,12 +3,15 @@
 
 List of a few things I made.
 
-** Phoebe
+** Phoebe - An Imperative Language in Haskell
 :PROPERTIES:
 :CUSTOM_ID: phoebe
 :END:
 
-Link: [[https:github.com/mrprofessor/phoebe][Source Code]]
+
+#+BEGIN_EXPORT HTML
+<a href="https://github.com/mrprofessor/phoebe" target="_blank">Source Code &#x29C9;</a>
+#+END_EXPORT
 
 Named after my cat, Phoebe is an imperative programming language based
 on the semantics defined by Michael J. C. Gordon in [[https://doi.org/10.1007/978-1-4612-6228-2][The Denotational

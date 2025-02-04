@@ -195,7 +195,8 @@ versus C's more mechanical approach
 
 #+begin_src c
   for(int i = 0; i < n_users; i++) { // Mechanism exposed
-      send_email(users[i]); }
+      send_email(users[i]);
+   }
 #+end_src
 
 Note that Python does not expose the update index. So in order to
@@ -206,7 +207,8 @@ becomes valuable:
 
 #+begin_src c
   for(int i = 0; i < n; i += 2) { // Skip every other element
-      process(array[i]); }
+      process(array[i]);
+  }
 #+end_src
 
 The level of abstraction often reflects the language's intended use

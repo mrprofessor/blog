@@ -354,21 +354,46 @@ template {
 }
 
 /* CUSTOM CSS */
+
 :root {
-    --bg: #FFFFFF;
-    --bg-bright: #EEEEEE;
-    --fg: #111;
-    --link: teal;
-    --code: #fc6c1c;
-    --border: #ccc;
-    --font-stack: Iosevka web,
-                  Menlo,
-                  Consolas,
-                  Monaco,
-                  Liberation Mono,
-                  Lucida Console,
-                  monospace;
+    --bg: #FBF1C7;
+    --bg-bright: #EBDBB2;
+    --fg: #3C3836;
+    --link: #076678;
+    --code: #9D0006;
+    --border: #D5C4A1;
+    --font-stack: Iosevka, Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace;
 }
+
+.dark-mode {
+    --bg: #282828;
+    --bg-bright: #323437;
+    --fg: #EBDBB2;
+    --code: #FB4934;
+    --border: #504945;
+    --link: #8EC07C;
+}
+
+
+
+/* :root { */
+/*     --bg: #FFFFFF; */
+/*     --bg-bright: #EEEEEE; */
+/*     --fg: #111; */
+/*     --link: #006666; */
+/*     --code: #fc6c1c; */
+/*     --border: #ccc; */
+/*     --font-stack: Iosevka, Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace; */
+/* } */
+
+/* .dark-mode { */
+/*     --bg: #353069; */
+/*     --bg-bright: #2a2652; */
+/*     --fg: #c5c1bc; */
+/*     --code: #ffb454; */
+/*     --border: #555366; */
+/*     --link: #ff9633; */
+/* } */
 
 
 @media (prefers-reduced-motion: no-preference) {
@@ -678,15 +703,6 @@ details p {
 /*         --border: #333; */
 /*     } */
 /* } */
-
-.dark-mode {
-    --bg: #353069;
-    --bg-bright: #2a2652;
-    --fg: #c5c1bc;
-    --code: #ffb454;
-    --border: #555366;
-    --link: #ff9633;
-}
 
 /* Add to your CSS */
 .dark-mode-toggle {

@@ -61,6 +61,12 @@ summaryLength = 99999999
     params.external = true
 
   [[menu.secondary]]
+    identifier = "projects"
+    name = "projects"
+    url = "/projects"
+    weight = 12
+
+  [[menu.secondary]]
     identifier = "keyboards"
     name = "keyboards"
     url = "https://mrprofessor.dev"
