@@ -272,7 +272,7 @@ holds true.
 :CUSTOM_ID: final-thoughts
 :END:
 
-Well, this is the hardest part of my articles. What do I think about
+Well, this is the hardest part of my archive. What do I think about
 elegant languages? I do not know honestly. I prefer to use something
 like Python until I need more control. I wish for programming
 languages with syntax that supports both approaches. Maybe Go is

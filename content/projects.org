@@ -3,7 +3,7 @@
 
 List of a few things I made.
 
-** Phoebe - An Imperative Language in Haskell
+** Phoebe - An Imperative Programming Language in Haskell
 :PROPERTIES:
 :CUSTOM_ID: phoebe
 :END:

@@ -24,9 +24,9 @@ summaryLength = 99999999
     weight = 10
 
   [[menu.main]]
-    identifier = "articles"
-    name = "articles"
-    url = "/articles"
+    identifier = "archive"
+    name = "archive"
+    url = "/archive"
     weight = 11
 
   [[menu.main]]
@@ -44,7 +44,7 @@ summaryLength = 99999999
   [[menu.main]]
     identifier = "feed"
     name = "feed"
-    url = "/articles/index.xml"
+    url = "/archive/index.xml"
     weight = 14
 
   [[menu.secondary]]
@@ -80,7 +80,7 @@ summaryLength = 99999999
   github = "https://github.com/mrprofessor"
   twitter = "@weary_beard"
   favicon = "/images/favicon/favicon.ico"
-  mainSections = "articles"
+  mainSections = "archive"
   recentArticlesLimit = 3
 
 [languages]
@@ -98,8 +98,6 @@ summaryLength = 99999999
     anchorLineNos = false
     codeFences = true
     guessSyntax = false
-    hl_Lines = ''
-    hl_inline = false
     lineAnchors = ''
     lineNoStart = 1
     lineNos = false

@@ -61,7 +61,7 @@
 
 <!-- Pagination meta tags for list pages only -->
 <!-- To make sure this renders only in the article page, we check the section -->
-{{ if eq .Section "articles" }}
+{{ if eq .Section "archive" }}
 
 <meta property="og:type" content="article" />
 <meta property="article:publisher" content="{{ .Site.Params.github }}" />
@@ -110,7 +110,7 @@
   </script>
 {{ end }}
 
- 
+
 {{ if eq .Section "about" }}
 <!-- Pagination meta tags for list pages only -->
 <meta property="og:type" content="website" />

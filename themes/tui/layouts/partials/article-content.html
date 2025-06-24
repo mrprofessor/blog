@@ -8,9 +8,9 @@
             <img src={{ .Params.Image }} loading="lazy">
         </div>
     {{ end }}
-    
+
     <!-- Add table of contents to single pages(must be a post) -->
-    {{ if (and (eq .IsPage true) (eq .Section "articles")) }}
+    {{ if (and (eq .IsPage true) (eq .Section "archive")) }}
         <h2>Table of Contents</h2>
         {{ .TableOfContents }}
     {{ end }}
