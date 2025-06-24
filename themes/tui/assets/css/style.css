@@ -355,29 +355,19 @@ template {
 
 /* CUSTOM CSS */
 
+/* Light Mode */
 :root {
-     --bg: #FFFFFF;
-     --bg-bright: #EEEEEE;
-     --fg: #111;
-     --link: #006666;
-     --code: #fc6c1c;
-     --border: #ccc;
-     --font-stack: Iosevka, Menlo, Consolas, Monaco, Liberation Mono,
+    --bg: #f8f6f3;
+    --bg-bright: #f0ede8;
+    --fg: #2d2d2d;
+    --link: #0f766e;
+    --code: #c2410c;
+    --border: #d6d3ce;
+    --font-stack: Menlo, Consolas, Monaco, Liberation Mono,
                   Lucida Console, monospace;
- }
+}
 
-/*Gruvbox light*/
-/*:root {*/
-    /*--bg: #FBF1C7;*/
-    /*--bg-bright: #EBDBB2;*/
-    /*--fg: #3C3836;*/
-    /*--link: #076678;*/
-    /*--code: #9D0006;*/
-    /*--border: #D5C4A1;*/
-    /*--font-stack: Iosevka, Menlo, Consolas, Monaco,*/
-                  /*Liberation Mono, Lucida Console, monospace;*/
-/*}*/
-
+/* Dark Mode */
 .dark-mode {
     --bg: #282828;
     --bg-bright: #141516;
@@ -463,6 +453,7 @@ a,
 a:visited {
     color: var(--link);
     text-decoration: none;
+    transition: color 0.15s ease;
 }
 
 a:hover {
