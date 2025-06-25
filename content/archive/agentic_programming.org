@@ -1,0 +1,76 @@
+#+TITLE: Agentic Programming is No Fun
+#+AUTHOR: rkar
+#+DATE: 2025-06-25
+
+
+This post is based on my personal experience after dabbling with
+AI-based agentic programming for a few days. Not that anyone actively
+reads my blog, but I want to document how I am feeling at this point
+in time, during what feels like the early rise of AI automation.
+
+* How I Use AI Today
+:PROPERTIES:
+:CUSTOM_ID: how-i-use-ai-today
+:END:
+
+I have been consistently using AI chatbots over the past couple of
+years for programming-related tasks. I barely Google error messages
+anymore; I just paste them into ChatGPT or Claude and move on. I am on
+the free tiers now, but I did subscribe for a few months after
+realizing Claude was better at generating code.
+
+Most of the time, I use these tools to generate snippets so I can
+avoid revisiting the docs for a library I have used before. I have
+even dumped LaTeX error logs in whole and just let the model sort them
+out.  There have been times when I dumped entire stack traces into
+ChatGPT for it to figure out a solution. It has been incredibly
+useful.
+
+* So, Why Not Agentic Programming?
+:PROPERTIES:
+:CUSTOM_ID: so-why-not-agentic-programming
+:END:
+
+I have never really bought into the hype behind agentic programming,
+that is, letting an AI model make changes directly in your
+codebase. The idea that we can trust a non-deterministic machine to
+make automated edits we would ship to production? That is a big no
+from me.
+
+** Programming is Fun. Reviewing Isn't.
+:PROPERTIES:
+:CUSTOM_ID: programming-is-fun-reviewing-isn-t
+:END:
+
+Recently, I decided to move my blog's post path from =/articles= to
+=/archive=. Since my articles are snapshots in time, I do not plan to
+update them unless something is seriously awful. This time, instead
+of using my usual Emacs setup, I opened up [Zed](https://zed.dev) and
+configured it to use GPT-4 as my preferred model. I asked it to rename
+all =/articles= references to =/archive=.
+
+It actually did the changes across multiple files. Cool! This was
+great, because I did not feel like manually going through
+everything. But when I ran my local server, nothing loaded. As I
+suspected, the model did not update some related routing logic. I
+fixed that manually. Right as I was about to commit, I noticed
+something odd: it had changed the word =articles= to =archive= in my
+about page and even inside blog post content. That made no sense. I
+started reviewing everything and, sure enough, found more
+inconsistencies.
+
+Now this made me wonder, do I like reviewing code? Ask my colleagues
+and you would know. I have to force myself to commit the first hour of
+my day reviewing code to get over the blues. It is not the fun part of
+my job, and I certainly do not want to spend even more time reviewing
+changes I did not even write.
+
+** Trust, But... Mostly Don't
+:PROPERTIES:
+:CUSTOM_ID: trust-but-mostly-don-t
+:END:
+
+I will continue using AI to generate snippets, debug errors, and
+answer technical questions. But a model with write access, editing
+things in unpredictable ways? That is not my cup of tea, at least not
+today.

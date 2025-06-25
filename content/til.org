@@ -57,7 +57,7 @@ expand the output using the browser's resize handle.
 =print= statement in other languages. It allows you to log messages
 while evaluating expressions.
 
-Here’s an example:
+Here's an example:
 
 #+begin_src haskell
   import System.IO

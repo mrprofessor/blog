@@ -141,11 +141,12 @@ notation to denote a Set.
 :CUSTOM_ID: what-makes-a-syntax-elegant
 :END:
 
-A quick Google search shows how many times this question has been
-asked in different forums[fn:3] and the diverse nature of answers to
-it. Honestly! What makes a painting, poem, or prose elegant? People
-have been trying to formulate theories to quantify it[fn:4]. I think
-it can be quite quite subjective.
+A quick Google search reveals how frequently this question arises and
+how diverse the answers are.[fn:3] What makes a painting or a poem
+elegant? People have tried to formulate theories to quantify it[fn:4]
+but these are just lenses and not laws. Elegance remains largely
+subjective, yet that does not mean we can’t explore common themes or
+patterns that people often find elegant.
 
 ** Resemblance to Natural Languages
 :PROPERTIES:
@@ -188,7 +189,7 @@ scenarios. When iterating over a collection of items, Python's
 approach shines.
 
 #+begin_src python
-  for user in users: # Clear intent send_mail(user)
+  for user in users: # Clear intent send_email(user)
 #+end_src
 
 versus C's more mechanical approach
@@ -272,11 +273,12 @@ holds true.
 :CUSTOM_ID: final-thoughts
 :END:
 
-Well, this is the hardest part of my archive. What do I think about
-elegant languages? I do not know honestly. I prefer to use something
-like Python until I need more control. I wish for programming
-languages with syntax that supports both approaches. Maybe Go is
-heading towards that future.
+Well, this is often the most difficult part of writing for me:
+reaching a conclusion. What do I think about elegant languages? To be
+honest, I am not entirely sure. I prefer to use something like Python
+until I need more control. I wish for programming languages with
+syntax that supports both approaches. Maybe Go is heading towards that
+future.
 
 But perhaps that is the point - just as beauty lies in the eye of the
 beholder, what makes a programming language elegant is deeply personal
@@ -307,7 +309,7 @@ predictable, based upon the name of the operation and other
 clues. [[https://wiki.c2.com/?PrincipleOfLeastAstonishment][↩]]
 [fn:10] Richard Wexelblat is credited with receiving the first
 computer science PhD in 1965. [[https://cacm.acm.org/blogcacm/who-earned-first-computer-science-ph-d/][↩]]
-[fn:11] Wexelblat, R. L. (1980). The consequences of one’s first
+[fn:11] Wexelblat, R. L. (1980). The consequences of one's first
 programming language. Proceedings of the 3rd ACM SIGSMALL Symposium
 and the First SIGPC Symposium on Small Systems,
 52–55. https://doi.org/10.1145/800088.802823
