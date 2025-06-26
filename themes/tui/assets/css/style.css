@@ -388,7 +388,7 @@ body {
     color: var(--fg);
     font-family: var(--font-stack);
     font-size: .9rem;
-    line-height: 1.4;
+    line-height: 1.5;
     max-width: 50em;
     margin: 0 auto;
     padding: 0 1rem;
@@ -620,6 +620,12 @@ code[data-lang]::before {
   z-index: 99999;
 }
 
+#toc {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    padding: 0 1rem;
+    border: 1px solid var(--border);
+}
 
 /* TIL page
     ========================================================================= */

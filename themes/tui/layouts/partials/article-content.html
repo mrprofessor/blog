@@ -11,8 +11,10 @@
 
     <!-- Add table of contents to single pages(must be a post) -->
     {{ if (and (eq .IsPage true) (eq .Section "archive")) }}
-        <h2>Table of Contents</h2>
-        {{ .TableOfContents }}
+        <div id="toc">
+            <h2>Table of Contents</h2>
+            {{ .TableOfContents }}
+        </div>
     {{ end }}
     {{ .Content | safeHTML }}
 </div>
