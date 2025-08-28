@@ -44,10 +44,10 @@ from me.
 
 Recently, I decided to move my blog's post path from =/articles= to
 =/archive=. Since my articles are snapshots in time, I do not plan to
-update them unless something is seriously awful. This time, instead
-of using my usual Emacs setup, I opened up [Zed](https://zed.dev) and
-configured it to use GPT-4 as my preferred model. I asked it to rename
-all =/articles= references to =/archive=.
+update them unless something is seriously awful. This time, instead of
+using my usual Emacs setup, I opened up [[https:zed.dev][Zed]] and configured it to use
+GPT-4 as my preferred model. I asked it to rename all =/articles=
+references to =/archive=.
 
 It actually did the changes across multiple files. Cool! This was
 great, because I did not feel like manually going through

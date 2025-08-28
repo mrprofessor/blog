@@ -56,7 +56,7 @@ summaryLength = 99999999
   [[menu.secondary]]
     identifier = "emacs"
     name = "emacs"
-    url = "https://emacs.rudra.dev"
+    url = "https://emacs.rkar.org"
     weight = 11
     params.external = true
 

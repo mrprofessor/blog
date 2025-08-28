@@ -13,7 +13,7 @@ that suit your needs and preferences.
 :END:
 
 + *Text Editor* - [[https://emacs.rkar.org][Emacs]], Zed
-+ *Terminal Emulator* - WezTerm
++ *Terminal Emulator* - iTerm2 +WezTerm+
 + *Web Browser* - Safari, Brave
 + *Misc* - Zsh, Obsidian, [[https://httpie.io][Httpie]]
 + *Window Manager* - [[https://github.com/nikitabobko/AeroSpace][Aerospace]]
@@ -38,7 +38,6 @@ that suit your needs and preferences.
 :CUSTOM_ID: ancient-history
 :END:
 
-+ *iTerm 2* - Not as feature rich as WezTerm/Kitty.
 + *Logseq* - Started to show its performance issues with large notes.
 + *Notion* - Great for databases, but not for everyday notes. Also, slow.
 + *Org-Roam* - Real PITA to take notes on a remote device.
