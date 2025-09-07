@@ -519,8 +519,13 @@ code[data-lang]::before {
    Layout - Images & Media
    ========================================================================== */
 
-img {
-    width: 100%;
+.post-img {
+    display: block;
+    margin: 1rem auto;
+}
+figcaption {
+    display: block;
+    text-align: center;
 }
 
 /* ==========================================================================
@@ -528,20 +533,19 @@ img {
    ========================================================================== */
 
 table {
+    margin: 0 auto;
     border-collapse: collapse;
-    color: var(--fg);
-    border-color: var(--bg-bright);
-    font-family: var(--font-stack);
-    font-size: 1rem;
+    font-family: var(--mono-stack);
+    font-size: 0.875rem;
+}
+th, td {
+    padding: 6px 12px;
+    text-align: left;
+}
+tbody tr:first-child {
+    border-top: 1.5px solid black;
 }
 
-thead,
-th,
-tr,
-td {
-    border: 1px solid var(--border);
-    padding: 0.25rem;
-}
 
 /* ==========================================================================
    Layout - Blockquotes & Aside
@@ -611,11 +615,14 @@ footer p {
 .wiki-post {
     display: flex;
     flex-direction: row;
+    align-items: baseline;
 }
 
 .post time {
-    flex-shrink: 0;
-    margin-right: 0.5rem;
+    flex: 0 0 120px;
+    text-align: right;
+    margin-right: 1rem;
+    font-weight: normal;
 }
 
 .wiki-post {
@@ -676,6 +683,7 @@ footer p {
     display: flex;
     justify-content: flex-start;
     align-items: top;
+    font-size: 0.95rem;
 }
 
 .footnote-definition sup {
