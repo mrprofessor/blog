@@ -46,7 +46,7 @@ that distinguishes the two groups, and then correctly classify a novel
 query image.
 
 
-* Methodology 
+* Methodology
 :PROPERTIES:
 :CUSTOM_ID: methodology
 :END:
@@ -195,7 +195,7 @@ evaluate those rules or turn this blog post into an Arxiv preprint.
 
 
 The code for this experiment can be found here for further inspection:
-https://github.com/mrprofessor/bongard_vlm
+[[https://github.com/mrprofessor/bongard_vlm][mrprofessor/bongard_vlm]]
 
 
 *Footnotes*
@@ -208,4 +208,3 @@ Human-Object Interactions. [[https://arxiv.org/abs/2205.13803][↩]]
 Concepts in the Real World. [[https://arxiv.org/abs/2310.10207][↩]]
 [fn:4] Pulitzer winners list. [[https://web.archive.org/web/20120226064816/http://www.pulitzer.org/bycat/General-Nonfiction][↩]]
 [fn:5] Index of Bongard problems maintained by Harry Foundalis. [[https://www.foundalis.com/res/bps/bpidx.htm][↩]]
-

@@ -3,6 +3,27 @@
 
 Tidbits, tips, things I read recently etc.
 
+* 2025/09/15 - Hugo render hooks are Markdown only.
+:PROPERTIES:
+:CUSTOM_ID: 2025-09-15-hugo-render-hooks-markdown-only-org-tables
+:END:
+
+Apparently, Hugo render hooks are Markdown-only. Since I use org files, I had to
+replace the table wrapper with a div in the article partial.
+
+Example wrapper in the partial:
+
+#+begin_src html
+  {{- $content := .Content -}}
+  {{- if not (findRE `<div class="table-wrapper">` $content 1) -}}
+      {{- $content = replaceRE `<table` `<div class="table-wrapper"><table` $content -}}
+      {{- $content = replaceRE `</table>` `</table></div>` $content -}}
+  {{- end -}}
+  {{ $content | safeHTML }}
+#+end_src
+
+Ref: [[https://gohugo.io/render-hooks/introduction/][Hugo render hooks]]
+
 * 2025/01/07 - Find a process attached to a port
 :PROPERTIES:
 :CUSTOM_ID: 2025-01-07-find-a-process-attached-to-a-port

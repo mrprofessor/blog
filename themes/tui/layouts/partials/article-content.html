@@ -16,5 +16,10 @@
             {{ .TableOfContents }}
         </div>
     {{ end }}
-    {{ .Content | safeHTML }}
+    {{- $content := .Content -}}
+    {{- if not (findRE `<div class="table-wrapper">` $content 1) -}}
+        {{- $content = replaceRE `<table` `<div class="table-wrapper"><table` $content -}}
+        {{- $content = replaceRE `</table>` `</table></div>` $content -}}
+    {{- end -}}
+    {{ $content | safeHTML }}
 </div>
