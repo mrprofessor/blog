@@ -16,18 +16,19 @@
     --link: #0f766e;
     --code: #c2410c;
     --border: #d6d3ce;
+
+    /* Font Familia */
     --font-stack: "Spectral", "Georgia", "Liberation Serif", "serif";
     --mono-stack: "Menlo", "Consolas", "Monaco", "Liberation Mono", "monospace";
 
     /* Font Sizes */
     --font-xs: 0.75rem;
     --font-sm: 0.875rem;
-    --font-md: 0.95rem;
-    --font-base: 1.125rem;
-    --font-xl: 1.2rem;
+    --font-base: 1rem;
+    --font-xl: 1rem;  /* H4 but bold*/
     --font-2xl: 1.25rem;
     --font-3xl: 1.5rem;
-    --font-4xl: 2rem;
+    --font-4xl: 1.75rem;
 }
 
 .dark-mode {
@@ -51,6 +52,7 @@
 html {
     line-height: 1.15; /* 1 */
     -webkit-text-size-adjust: 100%; /* 2 */
+    /*font-size: clamp(14px, 1.5vw, 16px);*/
 }
 
 /**
@@ -200,6 +202,7 @@ button,
 [type="reset"],
 [type="submit"] {
     -webkit-appearance: button;
+    appearance: button;
 }
 
 /**
@@ -292,6 +295,7 @@ textarea {
 
 [type="search"] {
     -webkit-appearance: textfield; /* 1 */
+    appearance: textfield;
     outline-offset: -2px; /* 2 */
 }
 
@@ -555,14 +559,14 @@ table {
     font-family: var(--mono-stack);
     font-size: var(--font-sm);
 }
-th, td {
+th,
+td {
     padding: 6px 12px;
     text-align: left;
 }
 tnbody tr:first-child {
     border-top: 1.5px solid black;
 }
-
 
 /* ==========================================================================
    Layout - Blockquotes & Aside
@@ -617,7 +621,7 @@ footer {
     border-top: 1px dotted;
     padding-top: 1rem;
     margin: 1rem 0;
-    font-size: var(--font-md);
+    font-size: var(--font-sm);
 }
 
 footer p {
@@ -680,7 +684,7 @@ footer p {
     margin-bottom: 2rem;
     padding: 0 1rem;
     border: 1px solid var(--border);
-    font-size: var(--font-md);
+    font-size: var(--font-sm);
 }
 
 /* ==========================================================================
@@ -700,7 +704,7 @@ footer p {
     display: flex;
     justify-content: flex-start;
     align-items: top;
-    font-size: var(--font-md);
+    font-size: var(--font-sm);
 }
 
 .footnote-definition sup {
@@ -759,7 +763,7 @@ details summary::-webkit-details-marker {
 
 details summary:before {
     content: "λ"; /* Custom closed marker */
-    font-size: var(--font-md);
+    font-size: var(--font-sm);
     color: var(--link);
     margin-right: 0.5rem;
     transition: transform 0.3s ease;

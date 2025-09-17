@@ -26,7 +26,7 @@ express it in natural language.
 
 #+CAPTION: Bongard Problem #50 - The figures on the left side have at least one axis of symmetry, while the figures on the right side have no axes of symmetry
 #+ATTR_HTML: :width 100% :class post-img
-[[file:/images/posts/bongard_vlm/01_img_bongard_50.png]]
+[[file:/images/posts/bongard_vlm/01_bongard_50_og.png]]
 
 Originally there were only 100 puzzles in the book. Later, Douglas
 Hofstadter popularized them through his Pulitzer Prize-winning book
@@ -85,8 +85,8 @@ can be found [[https://github.com/mrprofessor/bongard_vlm][here]].
 In total, I used 232 problems, resulting in 464 queries.
 
 #+CAPTION: Bongard Problem #50 - The sixth image from group A and group B are chosen as the query images I_{q1} and I_{q2}. The remaining images serve as examples.
-#+ATTR_HTML: :width 75% :class post-img
-[[file:/images/posts/bongard_vlm/02_img_bongard_50.png]]
+#+ATTR_HTML: :width 100% :class post-img
+[[file:/images/posts/bongard_vlm/02_bongard_50_mod.png]]
 
 ** Vision Language Models
 :PROPERTIES:
