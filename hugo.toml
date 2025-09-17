@@ -81,7 +81,7 @@ summaryLength = 99999999
   twitter = "@weary_beard"
   favicon = "/images/favicon/favicon.ico"
   mainSections = "archive"
-  recentArticlesLimit = 3
+  recentArticlesLimit = 5
 
 [languages]
   [languages.en]

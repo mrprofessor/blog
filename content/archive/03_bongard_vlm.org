@@ -1,3 +1,4 @@
+
 #+TITLE: Solving Bongard Problems using VLMs
 #+AUTHOR: rkar
 #+DATE: 2025-08-28
@@ -200,11 +201,11 @@ The code for this experiment can be found here for further inspection:
 
 *Footnotes*
 
-[fn:1] Bongard-LOGO: A New Benchmark for Human-Level Concept Learning and
-Reasoning. [[https://arxiv.org/abs/2010.00763][↩]]
-[fn:2] Bongard-HOI: Benchmarking Few-Shot Visual Reasoning for
-Human-Object Interactions. [[https://arxiv.org/abs/2205.13803][↩]]
-[fn:3] Bongard-OpenWorld: Few-Shot Reasoning for Free-form Visual
-Concepts in the Real World. [[https://arxiv.org/abs/2310.10207][↩]]
-[fn:4] Pulitzer winners list. [[https://web.archive.org/web/20120226064816/http://www.pulitzer.org/bycat/General-Nonfiction][↩]]
-[fn:5] Index of Bongard problems maintained by Harry Foundalis. [[https://www.foundalis.com/res/bps/bpidx.htm][↩]]
+[fn:1] [[https://arxiv.org/abs/2010.00763][Bongard-LOGO]]: A New Benchmark for Human-Level Concept Learning and
+Reasoning.
+[fn:2] [[https://arxiv.org/abs/2205.13803][Bongard-HOI]]: Benchmarking Few-Shot Visual Reasoning for
+Human-Object Interactions.
+[fn:3] [[https://arxiv.org/abs/2310.10207][Bongard-OpenWorld]]: Few-Shot Reasoning for Free-form Visual
+Concepts in the Real World.
+[fn:4] Pulitzer winners [[https://web.archive.org/web/20120226064816/http://www.pulitzer.org/bycat/General-Nonfiction][list]].
+[fn:5] [[https://www.foundalis.com/res/bps/bpidx.htm][Index]] of Bongard problems maintained by Harry Foundalis.
