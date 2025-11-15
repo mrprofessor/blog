@@ -2,10 +2,11 @@ baseURL = "https://rkar.org/"
 languageCode = "en-us"
 DefaultContentLanguage = "en"
 
-paginate = 30
-
 title = "rkar.org"
 theme = "tui"
+
+[pagination]
+  pagerSize = 30
 
 enableEmoji = true
 enableGitInfo = true
