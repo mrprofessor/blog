@@ -10,7 +10,7 @@ run:
 	hugo server
 
 clean:
-	rm -rvf docs
+	rm -rvf docs/*
 	rm -rvf public
 
 deploy:
