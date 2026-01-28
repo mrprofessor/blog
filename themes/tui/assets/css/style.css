@@ -796,6 +796,7 @@ span.tag::before {
     appearance: none;
     cursor: pointer;
     font-family: inherit;
+    vertical-align: middle;
 }
 
 /* Default state (light mode) */
