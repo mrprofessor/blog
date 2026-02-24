@@ -13,6 +13,9 @@ enableGitInfo = true
 enableRobotsTXT = true
 canonifyURLs = true
 
+[frontmatter]
+  lastmod = [":fileModTime", ":git"]
+
 publishDir = "docs"
 summaryLength = 99999999
 

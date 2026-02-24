@@ -1,6 +1,5 @@
 #+TITLE: Projects
 #+author: rkar
-#+date: 2025-02-24
 
 List of a few things I made.
 

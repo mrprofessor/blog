@@ -25,10 +25,12 @@
             {{ else }} 
                 <section class="post-metadata">
                     <h1 class="post__title">{{ .Title }}</h1>
-                    {{ if .Date }}
-                        <time>{{ .Date.Format "Jan 02, 2006" }}</time>
-                    {{ else }}
-                        <span> Last Modified: </span><time>{{ .Lastmod.Format "Jan 02, 2006" }}</time>
+                    {{ if .IsPage }}
+                        {{ if .Date }}
+                            <time>{{ .Date.Format "Jan 02, 2006" }}</time>
+                        {{ else if .Lastmod }}
+                            <span> Last Modified: </span><time>{{ .Lastmod.Format "Jan 02, 2006" }}</time>
+                        {{ end }}
                     {{ end }}
 
                     {{ partial "tagbar.html" }}
