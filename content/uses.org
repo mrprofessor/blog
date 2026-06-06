@@ -12,8 +12,8 @@ that suit your needs and preferences.
 :CUSTOM_ID: software
 :END:
 
-+ *Text Editor* - [[https://emacs.rkar.org][Emacs]], Zed
-+ *Terminal Emulator* - iTerm2 +WezTerm+
++ *Text Editor* - Zed, [[https://emacs.rkar.org][Emacs]]
++ *Terminal Emulator* - Ghostty + Tmux +iTerm2+ +WezTerm+
 + *Web Browser* - Safari, Brave
 + *Misc* - Zsh, Obsidian, [[https://httpie.io][Httpie]]
 + *Window Manager* - [[https://github.com/nikitabobko/AeroSpace][Aerospace]]
@@ -23,12 +23,12 @@ that suit your needs and preferences.
 :CUSTOM_ID: hardware
 :END:
 
-+ *Personal Computer* - 14" M3 Pro MacBook Pro (2023)
-+ *Work Computer* - 16" M2 Max MacBook Pro (2022)
++ *Work Computer* - 14" M5 Pro MacBook Pro (2026)
 + *Fun Computer* - Ryzen 5600x/Nvidia 3070 FE
 + *Handheld Computer* - Steam Deck OLED (2023)
++ *Personal Computer* - +14" M3 Pro MacBook Pro (2023)+
 + *Keyboards* - A bunch of [[https://mrprofessor.dev][boards]]
-+ *Headphones* - SteelSeries Arctis 7 (Xbox Edition), Realme buds 2 wired earphones
++ *Headphones* - SteelSeries Arctis 7 (Xbox Edition)
 + *Mouse* - Logitech G Pro Lightspeed
 + *Phone* - iPhone 14
 + *Camera* - Nikon D3500 + Kit Lens
