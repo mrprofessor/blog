@@ -8,3 +8,8 @@ require a second mortgage to host.
 Got questions about my articles? Found a bug in my code snippets? Or
 maybe you just want to debate vim vs emacs? Drop a comment or shoot me
 an email at ~contact[at]rkar.org~. I read everything, even the spam.
+
+** Current Status
+
+Busy building [[https://rudderless.dev/][raft]] and trying to be useful
+at my new work.

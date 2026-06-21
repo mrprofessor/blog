@@ -379,6 +379,15 @@ p:last-child {
     margin-bottom: 0;
 }
 
+/* Verse blocks (#+begin_verse): honor source line breaks, e.g. dialogue */
+.verse-block {
+    margin-bottom: 1.25rem;
+}
+
+.verse-block p {
+    white-space: pre-line;
+}
+
 /* ==========================================================================
    Typography - Headings
    ========================================================================== */

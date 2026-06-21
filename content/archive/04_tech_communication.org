@@ -1,0 +1,154 @@
+#+TITLE: The art of communication in tech
+#+AUTHOR: rkar
+#+DATE: 2026-06-21
+
+More often than not, I get messages like this:
+
+#+begin_verse
+*Mark:* Hey!
+/...4 hours later.../
+*Me:* ???????
+*Mark:* I have a few questions. Up for a quick call?
+*Me:* Hmm… what's the question?
+*Mark:* So, my client’s kid forgot their lunchbox. I was wondering if we have any protocols for that.
+*Me:* Yep, that’s actually a common issue. There’s a Confluence page with all the details. I wrote it, in fact, because you've asked me this same question multiple times over the last five years.
+*Mark:* Whoa, easy there. You know I decide your yearly salary hike, right?
+*Me:* Haha, just kidding! I know you’ve got a lot going on.
+#+end_verse
+
+This short exchange contains almost every communication failure that a
+software team can make: a naked ping, a synchronous interruption on an
+async tool, a documentation system nobody uses, a call as a first resort
+and a power dynamic deployed to shut down the critique.
+
+* The Naked Ping
+:PROPERTIES:
+:CUSTOM_ID: the-naked-ping
+:END:
+
+"hey", "got a sec?", "quick call?"
+
+These are naked pings: messages that announce intent without carrying
+any actual information. They force the recipient into a holding
+pattern. You cannot answer a question that has not been asked, so you
+just wait or wave back. And the round-trip multiplies: by the time you
+reply "what's up?", they may have stepped away, and now you are both
+waiting on each other instead of moving the actual problem forward.
+
+The fix is trivially simple: include the question in the first
+message, [[https://nohello.net/en/][nohello.net]] says it better than I can.
+
+* Async vs. Sync Communication
+:PROPERTIES:
+:CUSTOM_ID: async-vs-sync-communication
+:END:
+
+"Up for a quick call" treats Slack like a phone. It is not one.
+
+Every tool sits somewhere on a spectrum: ephemeral to permanent,
+synchronous to async. Reaching for the wrong one produces worse
+outcomes, not just mild annoyance. The failure mode is defaulting to
+"quick call" because it /feels/ faster. It rarely is. You trade five
+minutes of your time for twenty of someone else's, and nothing is
+written down once it is over.
+
+* Documentation and Searchability
+:PROPERTIES:
+:CUSTOM_ID: documentation-and-searchability
+:END:
+
+If I had a penny for every time I heard "we don't have enough docs", I
+would be a thousandaire. Most teams have plenty of documents now,
+especially with AI making them way easier than ever to write. The
+problem is almost never a lack of docs. It is discoverability and
+trust.
+
+In Mark's case the document plainly exists. I wrote it myself, the one
+about "missing lunchboxes". Either he does not know where to look, or he
+does not trust it enough to bother. Both are undesirable in a
+workplace. A document nobody can find may as well not exist, and a document
+that was wrong once loses its reader permanently.
+
+* It is Never a Quick Call
+:PROPERTIES:
+:CUSTOM_ID: it-is-never-a-quick-call
+:END:
+
+Mark has a problem. I am in the middle of something else. He sends
+"quick call?", and I context-switch, find a slot, join, answer, hang
+up, then spend another ten minutes finding my place again. A
+two-sentence Confluence lookup just cost us forty minutes between us.
+
+The research is unkind here. A [[https://hr.berkeley.edu/grow/grow-your-community/wisdom-café-wednesday/impact-interruptions][UC Irvine study]] found it takes over 25
+minutes to return to a task after an interruption, and an interruption
+of just 2.8 seconds is enough to double your error rate. Multiply that
+across a team of twelve and "just a quick sync" turns into a real line
+item.
+
+Before scheduling a call, ask whether it could be a message. Before
+sending a message, ask whether it could be an existing doc.
+
+* The Power Dynamics Trap
+:PROPERTIES:
+:CUSTOM_ID: the-power-dynamics-trap
+:END:
+
+Now, Mark dangling my salary over a lunchbox question is an
+exaggeration. But dial it down to something believable and the
+problem is very real. It is easy to push back when a junior sends a
+naked ping. It is a great deal harder when it is a senior director, even
+when they never threaten you with your salary at all.
+
+Hierarchy has a way of short-circuiting good communication norms. The
+people most likely to send context-free messages are often the ones
+with the most authority to do so (no data, just anecdotes). If the
+culture has not been set from the top, you are fighting a losing
+battle.
+
+* Question with Context
+:PROPERTIES:
+:CUSTOM_ID: question-with-context
+:END:
+
+A well-formed question is a skill. It carries what you are trying to
+do, what you have already tried, the relevant context (errors, links,
+ticket numbers), and how urgent it actually is.
+
+Compare Mark's "Hey, up for a quick call?" with: "A client's kid
+forgot their lunchbox. I checked the parent handbook but couldn't find
+anything, do we have a protocol for this? Not urgent, sometime today
+is fine."
+
+Same problem. One gets an answer. The other might turn into a calendar
+invite.
+
+* When a Call is Actually Right
+:PROPERTIES:
+:CUSTOM_ID: when-a-call-is-actually-right
+:END:
+
+None of this means calls are bad. Some things genuinely do not survive
+text. Emotionally complex conversations can lose too much in
+translation. Real-time debugging, or ambiguous requirements that would
+take thirty messages, can collapse into five minutes of good old
+talking.
+
+The idea is simple: would writing this down produce a worse outcome,
+or just a less comfortable one? If the answer is the latter, write it
+down.
+
+* The Whole Thing in One Habit
+:PROPERTIES:
+:CUSTOM_ID: the-whole-thing-in-one-habit
+:END:
+
+None of this is complicated. Most of it collapses into setting up a good practice.
+
+- *Slack / Teams* : quick, ephemeral, time-sensitive
+- *Docs (Confluence, Notion, Github Repo)* : persistent, searchable
+- *A call* : last resort, not first instinct
+
+Lead with a question, not the "hey". Write things down where people
+can find them. Treat someone else's time as the expensive resource it
+is. And if you hold a senior position, do all this loudly, because
+the team follows you whether you intend it or not.
