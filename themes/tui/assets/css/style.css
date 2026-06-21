@@ -52,7 +52,9 @@
 html {
     line-height: 1.15; /* 1 */
     -webkit-text-size-adjust: 100%; /* 2 */
-    /*font-size: clamp(14px, 1.5vw, 16px);*/
+    /* Stay 16px up to ~1280px, then scale up to 22px on 2K/4K displays.
+       Everything else is rem-based, so the column and spacing scale too. */
+    font-size: clamp(1rem, 0.6rem + 0.5vw, 1.25rem);
 }
 
 /**
@@ -649,10 +651,11 @@ footer p {
 }
 
 .post time {
-    flex: 0 0 120px;
+    flex: 0 0 8rem;
     text-align: right;
     margin-right: 1rem;
     font-weight: normal;
+    white-space: nowrap;
 }
 
 .wiki-post {
