@@ -10,6 +10,9 @@ maybe you just want to debate vim vs emacs? Drop a comment or shoot me
 an email at ~contact[at]rkar.org~. I read everything, even the spam.
 
 ** Current Status
+:PROPERTIES:
+:CUSTOM_ID: current-status
+:END:
 
 Busy building [[https://rudderless.dev/][raft]] and trying to be useful
-at my new work.
+at my new job.

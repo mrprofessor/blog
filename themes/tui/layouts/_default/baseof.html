@@ -5,6 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
+    <!-- Set the theme before first paint to avoid a flash of the wrong colors.
+         No saved choice? Fall back to the OS preference. -->
+    <script>
+      (function () {
+        try {
+          var saved = localStorage.getItem('darkMode');
+          var dark = saved === null
+            ? window.matchMedia('(prefers-color-scheme: dark)').matches
+            : saved === 'true';
+          if (dark) document.documentElement.classList.add('dark-mode');
+        } catch (e) {}
+      })();
+    </script>
+
     <!-- Favicon -->
     {{ with .Site.Params.favicon }}<link rel="icon" type="image/png" href="{{ . }}" />{{ end }}
 

@@ -1,4 +1,4 @@
-#+TITLE: The art of communication in tech
+#+TITLE: The Art of Communication in Tech
 #+AUTHOR: rkar
 #+DATE: 2026-06-21
 
@@ -64,10 +64,10 @@ problem is almost never a lack of docs. It is discoverability and
 trust.
 
 In Mark's case the document plainly exists. I wrote it myself, the one
-about "missing lunchboxes". Either he does not know where to look, or he
-does not trust it enough to bother. Both are undesirable in a
-workplace. A document nobody can find may as well not exist, and a document
-that was wrong once loses its reader permanently.
+about "missing lunchboxes". Either he does not know where to look, or
+he does not trust it enough to bother. Both are undesirable in a
+workplace. A document nobody can find may as well not exist, and a
+document that was wrong once loses its reader permanently.
 
 * It is Never a Quick Call
 :PROPERTIES:
@@ -94,9 +94,9 @@ sending a message, ask whether it could be an existing doc.
 :END:
 
 Now, Mark dangling my salary over a lunchbox question is an
-exaggeration. But dial it down to something believable and the
-problem is very real. It is easy to push back when a junior sends a
-naked ping. It is a great deal harder when it is a senior director, even
+exaggeration. But dial it down to something believable and the problem
+is very real. It is easy to push back when a junior sends a naked
+ping. It is a great deal harder when it is a senior director, even
 when they never threaten you with your salary at all.
 
 Hierarchy has a way of short-circuiting good communication norms. The
@@ -142,13 +142,14 @@ down.
 :CUSTOM_ID: the-whole-thing-in-one-habit
 :END:
 
-None of this is complicated. Most of it collapses into setting up a good practice.
+None of this is complicated. Most of it collapses into setting up a
+good practice.
 
-- *Slack / Teams* : quick, ephemeral, time-sensitive
-- *Docs (Confluence, Notion, Github Repo)* : persistent, searchable
-- *A call* : last resort, not first instinct
++ *Slack / Teams* : quick, ephemeral, time-sensitive
++ *Docs (Confluence, Notion, Github Repo)* : persistent, searchable
++ *A call* : last resort, not first instinct
 
 Lead with a question, not the "hey". Write things down where people
 can find them. Treat someone else's time as the expensive resource it
-is. And if you hold a senior position, do all this loudly, because
-the team follows you whether you intend it or not.
+is. And if you hold a senior position, do all this loudly, because the
+team follows you whether you intend it or not.
