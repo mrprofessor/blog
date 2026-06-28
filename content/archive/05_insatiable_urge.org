@@ -77,9 +77,8 @@ comfortable with their workflow. Teams should use this as an
 opportunity to diagnose and make things better.
 
 
-* Conclusion
+* The Fences
 :PROPERTIES:
-:CUSTOM_ID: conclusion
 :END:
 
 The first few weeks are not for changing things, they are for earning

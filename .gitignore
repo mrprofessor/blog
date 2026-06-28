@@ -6,3 +6,5 @@ docs/*
 public/
 resources
 
+\#*\#
+.serena/
