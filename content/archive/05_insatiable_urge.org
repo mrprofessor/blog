@@ -1,0 +1,93 @@
+#+TITLE: The Insatiable Urge to Change Everything on Day One
+#+AUTHOR: rkar
+#+DATE: 2026-06-28
+
+You worked at a place for six years. Six years is a long time to be
+anywhere. You absorbed the culture, hoarded a small mountain of tribal
+knowledge, and earned the kind of respect that comes from simply
+having been there. Somewhere in all that you quietly decided you can
+solve any problem, because you solved the last ones. Your brain is happy,
+proud and a little too courageous.
+
+Then you switched jobs because you wanted something different, or
+because the problems stopped being hard enough to be interesting. But
+you do not leave empty handed. Nobody tells you that the most dangerous
+thing you bring to a new job is not your bad habits, it is your good
+ones.
+
+
+* The Urge
+:PROPERTIES:
+:CUSTOM_ID: the-urge
+:END:
+
+Day one at your new job, and you can see things you would "obviously"
+do differently. Their release process, review process, CI, deployment
+pipeline and that one cursed library shared by 13 microservices.
+
+It hits hard. At the old place you were valued, trusted, and
+dependable. Here you are none of that, but your
+instinct does not know that yet.
+
+Maybe you act. You write a proposal on why their deploy pipeline
+should not require three manual checks to ship a one-line change. You
+present it. Then a Principal engineer who has been there for eight
+years says, "Yeah, that doesn't really fit our use-case here," and the
+room moves on. And that is your first real lesson at the new place,
+just not the one you pitched.
+
+
+* The Misplaced Emotions
+:PROPERTIES:
+:CUSTOM_ID: the-misplaced-emotions
+:END:
+
+Every weird thing exists for a reason you cannot see yet. You were
+not there when they fixed a major sev. You were not there when they
+got yelled at by the security team for having very permissive IAM
+policies. You just do not have enough context.
+
+You are pattern matching your previous company's problems, not
+theirs. Same symptom, different disease.
+
+You have not spent enough time in the company, so you have not earned
+the trust to hold an opinion that strong. No one trusts a new person
+who likes to rewrite the whole thing in their first week.
+
+If you have joined a new team, the least you could do is make their
+lives easier, not harder. And yes, your proposed change might make
+their life easier, but change is always harder.
+
+
+* The Nuance
+:PROPERTIES:
+:CUSTOM_ID: the-nuance
+:END:
+
+Patience is the key. Do not propose ideas in your first week. Try to
+talk to as many people as possible, ask for reasons, learn about their
+past experiences, discuss your proposals without acting like a
+"know-it-all". Capture observations early, act on them gradually. The
+skill is not suppressing the urge, it is timing it.
+
+
+With all that said, a fresh set of eyes can be a real asset with a
+shelf life. You can see the problems clearly only until you get
+comfortable with their workflow. Teams should use this as an
+opportunity to diagnose and make things better.
+
+
+* Conclusion
+:PROPERTIES:
+:CUSTOM_ID: conclusion
+:END:
+
+The first few weeks are not for changing things, they are for earning
+the right to. Spend them learning why the fences exist before you tear
+them down. Keep a list of everything that could have been better,
+revisit in a few more weeks, and notice how much of it already makes
+sense once you understand the context. What is left after that is
+probably worth fixing, and by then hopefully people will actually
+trust you to do so.
+
+

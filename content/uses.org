@@ -24,8 +24,7 @@ that suit your needs and preferences.
 :END:
 
 + *Work Computer* - 14" M5 Pro MacBook Pro (2026)
-+ *Personal Computer* - +14" M3 Pro MacBook Pro (2023)+
-+ *Fun Computer* - Ryzen 5600x/Nvidia 3070 FE
++ *Personal Computer* - Custom build (Ryzen 5600x/Nvidia 3070 FE)
 + *Handheld Computer* - Steam Deck OLED (2023)
 + *Keyboards* - A bunch of [[https://mrprofessor.dev][boards]]
 + *Headphones* - SteelSeries Arctis 7 (Xbox Edition)
