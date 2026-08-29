@@ -3,14 +3,14 @@
 
 List of a few things I made.
 
-** Rudderless - A Kubernetes IDE for MacOS
+** Raft - A Kubernetes IDE for MacOS
 :PROPERTIES:
 :CUSTOM_ID: rudderless
 :END:
 
 
 #+BEGIN_EXPORT HTML
-<a href="https://rudderless.dev" target="_blank">Landing Page</a>
+<a href="https://rudderless.dev/raft" target="_blank">Landing Page</a>
 #+END_EXPORT
 
 A native macOS Kubernetes IDE built with Swift and SwiftUI for fast

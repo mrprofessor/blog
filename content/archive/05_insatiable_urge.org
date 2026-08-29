@@ -79,6 +79,7 @@ opportunity to diagnose and make things better.
 
 * The Fences
 :PROPERTIES:
+:CUSTOM_ID: the-fences
 :END:
 
 The first few weeks are not for changing things, they are for earning

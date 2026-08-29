@@ -20,3 +20,11 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e)
         if (darkModeToggle) darkModeToggle.checked = e.matches;
     }
 });
+
+// Flag org babel result blocks that are actually compiler errors/warnings, so
+// the CSS can style them red instead of like plain stdout.
+document.querySelectorAll('.src + pre.example').forEach((out) => {
+    if (/\berror:|\bwarning:/.test(out.textContent)) {
+        out.classList.add('is-error');
+    }
+});

@@ -1,3 +1,4 @@
+
 #+TITLE: Uses
 #+author: rkar
 
@@ -23,7 +24,7 @@ that suit your needs and preferences.
 :CUSTOM_ID: hardware
 :END:
 
-+ *Work Computer* - 14" M5 Pro MacBook Pro (2026)
++ *Work Computer* - 14" MacBook Pro (M5 Pro )
 + *Personal Computer* - Custom build (Ryzen 5600x/Nvidia 3070 FE)
 + *Handheld Computer* - Steam Deck OLED (2023)
 + *Keyboards* - A bunch of [[https://mrprofessor.dev][boards]]
