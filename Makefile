@@ -1,6 +1,4 @@
-.PHONY: build run clean deploy
-
-VERSION ?= latest
+.PHONY: build run clean
 
 build:
 	hugo --destination docs
@@ -12,8 +10,3 @@ run:
 clean:
 	rm -rvf docs/*
 	rm -rvf public
-
-deploy:
-	git add docs/
-	git commit -m "Rebuild"
-	git push origin master

@@ -4,3 +4,19 @@
 :END:
 
 Articles and other things
+
+* Development
+
+Requires Hugo (extended).
+
+- =make run= starts the local preview server.
+- =make build= generates the site in =docs/=.
+
+* Deployment
+
+GitHub Actions builds and deploys the site to GitHub Pages on pushes
+to =master=. Commit and push source changes; generated files in =docs/=
+are ignored and should not be committed.
+
+To redeploy the current source on =master=, manually run the
+"Deploy Hugo site to Pages" workflow in GitHub Actions.

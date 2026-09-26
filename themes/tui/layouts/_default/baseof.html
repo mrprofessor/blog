@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ .Site.LanguageCode | default "en-us" }}">
+<html lang="{{ .Site.Language.Locale | default "en-us" }}">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -22,15 +22,7 @@
     <!-- Favicon -->
     {{ with .Site.Params.favicon }}<link rel="icon" type="image/png" href="{{ . }}" />{{ end }}
 
-    {{ if eq .IsPage true }}
-    <title itemprop="name">{{ .Title }}</title>
-    {{ else }}
-    <title itemprop="name">{{ .Title }} </title>
-	{{ end }}
-
-    
-    {{ with .Site.Params.description }}<meta name="description" content="{{ . }}">{{ end }}
-    {{ with .Site.Params.author }}<meta name="author" content="{{ . }}">{{ end }}
+    <title>{{ .Title }}</title>
 
     <link rel="preload" href="{{ "fonts/iosevka/iosevka-extended-regular.woff2" | relURL }}" as="font" type="font/woff2" crossorigin>
     {{ $styles := resources.Get "css/style.css" | minify | fingerprint}}

@@ -1,5 +1,5 @@
 baseURL = "https://rkar.org/"
-languageCode = "en-us"
+locale = "en-us"
 DefaultContentLanguage = "en"
 
 title = "rkar.org"
@@ -79,7 +79,7 @@ summaryLength = 99999999
 
 [params]
   author = "rkar"
-  description = ""
+  description = "Notes by rkar on programming, software tools, and life in tech."
   sitename = "rkar blog"
   github = "https://github.com/mrprofessor"
   twitter = "@weary_beard"
@@ -89,9 +89,12 @@ summaryLength = 99999999
 
 [languages]
   [languages.en]
-    languageName = "English"
-    languageCode = "en-us"
+    label = "English"
+    locale = "en-us"
     weight = 1
+
+[security]
+  allowContent = ['^text/org$']
 
 [markup]
   [markup.tableOfContents]
