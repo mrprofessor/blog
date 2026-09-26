@@ -4,6 +4,32 @@
    CSS Custom Properties
    ========================================================================== */
 
+/* Iosevka v34.8.1 Extended, unhinted, subset to Latin-1 + the few symbols the
+   site uses. No semibold file: weight 600 falls through to bold. */
+@font-face {
+    font-family: "Iosevka Extended";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url("/fonts/iosevka/iosevka-extended-regular.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "Iosevka Extended";
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url("/fonts/iosevka/iosevka-extended-bold.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "Iosevka Extended";
+    font-style: italic;
+    font-weight: 400;
+    font-display: swap;
+    src: url("/fonts/iosevka/iosevka-extended-italic.woff2") format("woff2");
+}
+
 /* Light Mode: the blog's original cream palette. Only the paper grain (on body)
    is carried over from dervis.de "physical" - the colours are back to og. */
 :root {
@@ -20,22 +46,20 @@
     --rule: #d6d3ce;
 
     /* Font Familia */
-    /* System serifs, no webfont. Charter ships with macOS; Sitka Text and
-       Cambria ship with Windows and were drawn for ClearType; Georgia catches
-       the rest. Each platform renders a face its own vendor hinted, which is
-       the whole point after Spectral fell apart under DirectWrite. */
-    --font-stack: Charter, "Bitstream Charter", "Sitka Text", Cambria, Georgia,
-        "Noto Serif", "Liberation Serif", serif;
-    --mono-stack: Menlo, Consolas, Monaco, "Liberation Mono", monospace;
+    /* Iosevka Extended, self-hosted (see @font-face above). */
+    --font-stack: "Iosevka Extended", Menlo, Consolas, Monaco,
+        "Liberation Mono", monospace;
+    --mono-stack: "Iosevka Extended", Menlo, Consolas, Monaco,
+        "Liberation Mono", monospace;
 
     /* Font Sizes */
     --font-xs: 0.75rem;
-    --font-sm: 0.875rem;
-    --font-base: 1rem;
-    --font-xl: 1rem;  /* H4 but bold*/
-    --font-2xl: 1.25rem;
-    --font-3xl: 1.6rem;
-    --font-4xl: 1.9rem;
+    --font-sm: 0.8125rem;
+    --font-base: 0.875rem;
+    --font-xl: 0.875rem;  /* H4 but bold*/
+    --font-2xl: 1rem;
+    --font-3xl: 1.2rem;
+    --font-4xl: 1.45rem;
 }
 
 /* Dark Mode: Ghostty's "Aardvark Blue" palette (deep navy), kept from before.
