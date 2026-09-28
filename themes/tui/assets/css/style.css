@@ -4,30 +4,21 @@
    CSS Custom Properties
    ========================================================================== */
 
-/* Iosevka v34.8.1 Extended, unhinted, subset to Latin-1 + the few symbols the
-   site uses. No semibold file: weight 600 falls through to bold. */
+/* Alegreya variable (wght 400-900), latin subset from Fontsource. Body text. */
 @font-face {
-    font-family: "Iosevka Extended";
+    font-family: "Alegreya";
     font-style: normal;
-    font-weight: 400;
+    font-weight: 400 900;
     font-display: swap;
-    src: url("/fonts/iosevka/iosevka-extended-regular.woff2") format("woff2");
+    src: url("/fonts/alegreya/alegreya-latin-wght-normal.woff2") format("woff2");
 }
 
 @font-face {
-    font-family: "Iosevka Extended";
-    font-style: normal;
-    font-weight: 700;
-    font-display: swap;
-    src: url("/fonts/iosevka/iosevka-extended-bold.woff2") format("woff2");
-}
-
-@font-face {
-    font-family: "Iosevka Extended";
+    font-family: "Alegreya";
     font-style: italic;
-    font-weight: 400;
+    font-weight: 400 900;
     font-display: swap;
-    src: url("/fonts/iosevka/iosevka-extended-italic.woff2") format("woff2");
+    src: url("/fonts/alegreya/alegreya-latin-wght-italic.woff2") format("woff2");
 }
 
 /* Light Mode: the blog's original cream palette. Only the paper grain (on body)
@@ -46,20 +37,24 @@
     --rule: #d6d3ce;
 
     /* Font Familia */
-    /* Iosevka Extended, self-hosted (see @font-face above). */
-    --font-stack: "Iosevka Extended", Menlo, Consolas, Monaco,
-        "Liberation Mono", monospace;
-    --mono-stack: "Iosevka Extended", Menlo, Consolas, Monaco,
-        "Liberation Mono", monospace;
+    /* Alegreya (self-hosted) for prose, the system monospace for code. */
+    /* Fallbacks in order: macOS, Windows, Linux. */
+    --font-stack: "Alegreya", "Iowan Old Style", Charter, "Sitka Text", Cambria,
+        Georgia, "Noto Serif", "DejaVu Serif", "Liberation Serif", serif;
+    --mono-stack: ui-monospace, SFMono-Regular, Menlo, Monaco, "Cascadia Mono",
+        Consolas, "DejaVu Sans Mono", "Liberation Mono", "Noto Sans Mono",
+        monospace;
 
     /* Font Sizes */
-    --font-xs: 0.75rem;
-    --font-sm: 0.8125rem;
-    --font-base: 0.875rem;
-    --font-xl: 0.875rem;  /* H4 but bold*/
-    --font-2xl: 1rem;
-    --font-3xl: 1.2rem;
-    --font-4xl: 1.45rem;
+    --font-xs: 0.875rem;  /* mono only: code blocks */
+    --font-sm: 1rem;      /* mono only: inline code, dates */
+    /* Alegreya has a small x-height, so prose runs larger than the code. */
+    --prose-sm: 1rem;    /* small prose: footer, tables, footnotes */
+    --font-base: 1.2rem;
+    --font-xl: 1.2rem;  /* H4 but bold*/
+    --font-2xl: 1.5rem;
+    --font-3xl: 1.9rem;
+    --font-4xl: 2.25rem;
 }
 
 /* Dark Mode: Ghostty's "Aardvark Blue" palette (deep navy), kept from before.
@@ -93,9 +88,9 @@
 html {
     line-height: 1.15; /* 1 */
     -webkit-text-size-adjust: 100%; /* 2 */
-    /* Stay 16px up to ~1280px, then scale up to 22px on 2K/4K displays.
+    /* Stay 16px up to ~1280px, then scale up to 18px on wider displays.
        Everything else is rem-based, so the column and spacing scale too. */
-    font-size: clamp(1rem, 0.6rem + 0.5vw, 1.25rem);
+    font-size: clamp(1rem, 0.6rem + 0.5vw, 1.125rem);
 }
 
 /**
@@ -577,9 +572,10 @@ code {
     border-radius: 3px;
 }
 
-time {
-    font-family: var(--font-stack);
-    font-size: inherit;
+time,
+.lastmod-label {
+    font-family: var(--mono-stack);
+    font-size: var(--font-sm);
 }
 
 /* Show language name in code blocks */
@@ -673,7 +669,7 @@ table {
     margin: 0 auto;
     border-collapse: collapse;
     font-family: var(--mono-stack);
-    font-size: var(--font-xs);
+    font-size: var(--prose-sm);
 }
 th,
 td {
@@ -739,7 +735,7 @@ footer {
     border-top: 1px dotted;
     padding-top: 1rem;
     margin: 1rem 0;
-    font-size: var(--font-sm);
+    font-size: var(--prose-sm);
 }
 
 footer p {
@@ -803,7 +799,7 @@ footer p {
     margin-bottom: 2rem;
     padding: 0 1rem;
     border: 1px solid var(--border);
-    font-size: var(--font-sm);
+    font-size: var(--font-base);
 }
 
 /* ==========================================================================
@@ -823,7 +819,7 @@ footer p {
     display: flex;
     justify-content: flex-start;
     align-items: top;
-    font-size: var(--font-sm);
+    font-size: var(--prose-sm);
 }
 
 .footnote-definition sup {
@@ -882,7 +878,7 @@ details summary::-webkit-details-marker {
 
 details summary:before {
     content: "λ"; /* Custom closed marker */
-    font-size: var(--font-sm);
+    font-size: var(--prose-sm);
     color: var(--link);
     margin-right: 0.5rem;
     transition: transform 0.3s ease;
