@@ -542,14 +542,16 @@ pre {
 /* Source code blocks read as a raised card. On the light paper the fill alone
    is too faint, so a soft shadow gives it elevation. On navy a shadow is
    invisible, so the dark theme uses a hairline border instead. */
-.highlight pre {
+.highlight pre,
+.src > pre {  /* languages Chroma has no lexer for, e.g. algol60 */
     background-color: var(--panel) !important;
     border-radius: 6px;
     box-shadow: 0 1px 2px rgba(45, 35, 25, 0.12),
                 0 5px 14px rgba(45, 35, 25, 0.07);
 }
 
-.dark-mode .highlight pre {
+.dark-mode .highlight pre,
+.dark-mode .src > pre {
     box-shadow: none;
     border: 1px solid var(--border);
 }
@@ -557,7 +559,46 @@ pre {
 pre > code {
     font-family: var(--mono-stack);
     font-size: inherit;
+    background-color: transparent; /* one flat panel, no inner mat */
 }
+
+/* Syntax colours (Chroma classes, noClasses = false). Built from the site
+   tokens, so the navy dark mode follows along for free. */
+.chroma .k, .chroma .kc, .chroma .kd, .chroma .kn,
+.chroma .kp, .chroma .kr, .chroma .ow {
+    color: var(--link);
+    font-weight: 600;
+}
+
+.chroma .kt, .chroma .nc,
+.chroma .s, .chroma .s1, .chroma .s2, .chroma .sa, .chroma .sb,
+.chroma .sc, .chroma .dl, .chroma .sd, .chroma .se, .chroma .sh,
+.chroma .si, .chroma .sx, .chroma .sr, .chroma .ss {
+    color: var(--code);
+}
+
+.chroma .m, .chroma .mb, .chroma .mf, .chroma .mh,
+.chroma .mi, .chroma .il, .chroma .mo {
+    color: var(--result);
+}
+
+/* Comments in Alegreya italic: a margin note, not code. */
+.chroma .c, .chroma .ch, .chroma .cm, .chroma .c1,
+.chroma .cs, .chroma .cp, .chroma .cpf {
+    font-family: var(--font-stack);
+    font-size: 1.15em; /* Alegreya's small x-height vs the mono */
+    font-style: italic;
+    color: color-mix(in srgb, var(--fg) 60%, transparent);
+}
+
+.chroma .err {
+    color: var(--error);
+}
+
+.chroma .gd { color: var(--error); }
+.chroma .gi { color: var(--result); }
+.chroma .ge { font-style: italic; }
+.chroma .gs { font-weight: 700; }
 
 code {
     font-family: var(--mono-stack);
